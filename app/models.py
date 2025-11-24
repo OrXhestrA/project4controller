@@ -55,6 +55,13 @@ class HeartRateData(BaseModel):
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
     value: float = Field(..., ge=0, le=200, description="心率值")
 
+    def to_dict(self):
+        return {
+            "user_id": self.user_id,
+            "timestamp": self.timestamp.isoformat(),
+            "value": self.value
+        }
+
     @field_validator("timestamp")
     def validate_timestamp(cls, value):
         try:

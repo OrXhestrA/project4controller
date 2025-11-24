@@ -27,7 +27,7 @@ async_session_maker = async_sessionmaker(
     class_=AsyncSession,
     expire_on_commit=False
 )
-redis_pool = None
+_redis = None
 
 
 async def get_redis_pool():
@@ -35,16 +35,16 @@ async def get_redis_pool():
     Get Redis Pool
     :return: redis_pool
     """
-    log.info("Initializing Redis connection pool")
-    global redis_pool
-    if redis_pool is None:
-        redis_pool = redis.from_url(
+    global _redis
+    if _redis is None:
+        log.info("Initializing Redis connection pool")
+        _redis = redis.from_url(
             REDIS_URL,
             password=REDIS_PASSWORD if REDIS_PASSWORD else None,
             encoding="utf-8",
             decode_responses=True
         )
-    return redis_pool
+    return _redis
 
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:

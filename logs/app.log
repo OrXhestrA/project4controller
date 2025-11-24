@@ -302,3 +302,303 @@ sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled 
 2025-11-24 18:43:21 | INFO     | System v1.0.0 Starting up...
 2025-11-24 18:43:21 | INFO     | website: http://0.0.0.0:8000/docs
 2025-11-24 18:43:51 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:12:40 | INFO     | Initializing database
+2025-11-25 00:12:41 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:12:41 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:17:38 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:17:41 | INFO     | Initializing database
+2025-11-25 00:17:41 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:17:41 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:33:58 | INFO     | Upload heart data: 0001
+2025-11-25 00:33:58 | INFO     | uploading heart data from user 0001
+2025-11-25 00:33:58 | INFO     | Opening database session
+2025-11-25 00:33:58 | INFO     | Begin DB transaction
+2025-11-25 00:33:58 | INFO     | Initializing Redis connection pool
+2025-11-25 00:33:58 | INFO     | init cache aside repository
+2025-11-25 00:33:58 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 00:33:58 | INFO     | insert heart rate data - user : 0001
+2025-11-25 00:33:58 | INFO     | Closing DB session
+2025-11-25 00:33:59 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:34:01 | INFO     | Initializing database
+2025-11-25 00:34:01 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:34:01 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:34:01 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:34:03 | INFO     | Initializing database
+2025-11-25 00:34:03 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:34:03 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:37:00 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:37:03 | INFO     | Initializing database
+2025-11-25 00:37:03 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:37:03 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:37:05 | INFO     | Upload heart data: 0001
+2025-11-25 00:37:05 | INFO     | uploading heart data from user 0001
+2025-11-25 00:37:05 | INFO     | Opening database session
+2025-11-25 00:37:05 | INFO     | Begin DB transaction
+2025-11-25 00:37:05 | INFO     | Initializing Redis connection pool
+2025-11-25 00:37:05 | INFO     | init cache aside repository
+2025-11-25 00:37:05 | INFO     | insert heart rate data
+2025-11-25 00:37:05 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 00:37:05 | INFO     | insert heart rate data - user : 0001
+2025-11-25 00:37:05 | INFO     | Closing DB session
+2025-11-25 00:37:23 | INFO     | Initializing database
+2025-11-25 00:37:23 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:37:23 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:37:29 | INFO     | Upload heart data: 0001
+2025-11-25 00:37:29 | INFO     | uploading heart data from user 0001
+2025-11-25 00:37:29 | INFO     | Opening database session
+2025-11-25 00:37:29 | INFO     | Begin DB transaction
+2025-11-25 00:37:29 | INFO     | Initializing Redis connection pool
+2025-11-25 00:37:29 | INFO     | init cache aside repository
+2025-11-25 00:37:29 | INFO     | insert heart rate data
+2025-11-25 00:37:29 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 00:37:29 | INFO     | insert heart rate data - user : 0001
+2025-11-25 00:37:29 | INFO     | Closing DB session
+2025-11-25 00:43:07 | INFO     | Upload heart data: 0001
+2025-11-25 00:43:07 | INFO     | uploading heart data from user 0001
+2025-11-25 00:43:07 | INFO     | Opening database session
+2025-11-25 00:43:07 | INFO     | Begin DB transaction
+2025-11-25 00:43:07 | INFO     | init cache aside repository
+2025-11-25 00:43:07 | INFO     | insert heart rate data
+2025-11-25 00:43:07 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 00:43:07 | INFO     | insert heart rate data - user : 0001
+2025-11-25 00:43:07 | INFO     | Closing DB session
+2025-11-25 00:44:40 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 00:44:42 | INFO     | Initializing database
+2025-11-25 00:44:42 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:44:42 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:59:12 | INFO     | Initializing database
+2025-11-25 00:59:12 | INFO     | System v1.0.0 Starting up...
+2025-11-25 00:59:12 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 00:59:30 | INFO     | Upload heart data: 0001
+2025-11-25 00:59:30 | INFO     | uploading heart data from user 0001
+2025-11-25 00:59:30 | INFO     | Opening database session
+2025-11-25 00:59:30 | INFO     | Begin DB transaction
+2025-11-25 00:59:30 | INFO     | Initializing Redis connection pool
+2025-11-25 00:59:30 | INFO     | init cache aside repository
+2025-11-25 00:59:30 | INFO     | insert heart rate data
+2025-11-25 00:59:30 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 00:59:30 | INFO     | insert heart rate data - user : 0001
+2025-11-25 00:59:30 | INFO     | Closing DB session
+2025-11-25 01:00:06 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:11:15 | INFO     | Initializing database
+2025-11-25 01:11:15 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:11:15 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:11:23 | INFO     | Upload heart data: 0001
+2025-11-25 01:11:23 | INFO     | uploading heart data from user 0001
+2025-11-25 01:11:23 | INFO     | Opening database session
+2025-11-25 01:11:23 | INFO     | Begin DB transaction
+2025-11-25 01:11:23 | INFO     | Initializing Redis connection pool
+2025-11-25 01:11:23 | INFO     | init cache aside repository
+2025-11-25 01:11:23 | INFO     | insert heart rate data
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:11:23 | INFO     | invalidate cache - keys : ('heart_rate:0001:latest',)
+2025-11-25 01:11:23 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:11:23 | INFO     | Closing DB session
+2025-11-25 01:14:41 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:14:43 | INFO     | Initializing database
+2025-11-25 01:14:43 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:14:43 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:14:48 | INFO     | Upload heart data: 0001
+2025-11-25 01:14:48 | INFO     | uploading heart data from user 0001
+2025-11-25 01:14:48 | INFO     | Opening database session
+2025-11-25 01:14:48 | INFO     | Begin DB transaction
+2025-11-25 01:14:48 | INFO     | Initializing Redis connection pool
+2025-11-25 01:14:48 | INFO     | init cache aside repository
+2025-11-25 01:14:48 | INFO     | insert heart rate data
+2025-11-25 01:14:48 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:14:48 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:14:48 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:14:48 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:14:48 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:14:48 | INFO     | set cache - key : ['heart_rate:0001:latest']
+2025-11-25 01:14:48 | ERROR    | error when insert heart rate data: Object of type HeartRateDataDB is not JSON serializable
+2025-11-25 01:14:48 | INFO     | Closing DB session
+2025-11-25 01:15:21 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:15:23 | INFO     | Initializing database
+2025-11-25 01:15:23 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:15:23 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:15:28 | INFO     | Upload heart data: 0001
+2025-11-25 01:15:28 | INFO     | uploading heart data from user 0001
+2025-11-25 01:15:28 | INFO     | Opening database session
+2025-11-25 01:15:28 | INFO     | Begin DB transaction
+2025-11-25 01:15:28 | INFO     | Initializing Redis connection pool
+2025-11-25 01:15:28 | INFO     | init cache aside repository
+2025-11-25 01:15:28 | INFO     | insert heart rate data
+2025-11-25 01:15:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:15:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:15:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:15:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:15:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:15:28 | INFO     | Closing DB session
+2025-11-25 01:19:53 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:19:55 | INFO     | Initializing database
+2025-11-25 01:19:55 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:19:55 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:20:03 | INFO     | Upload heart data: 0001
+2025-11-25 01:20:03 | INFO     | uploading heart data from user 0001
+2025-11-25 01:20:03 | INFO     | Opening database session
+2025-11-25 01:20:03 | INFO     | Begin DB transaction
+2025-11-25 01:20:03 | INFO     | Initializing Redis connection pool
+2025-11-25 01:20:03 | INFO     | init cache aside repository
+2025-11-25 01:20:03 | INFO     | insert heart rate data
+2025-11-25 01:20:03 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:20:03 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:20:03 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:20:03 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:20:03 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:20:03 | INFO     | set cache - key : ['heart_rate:0001:latest']
+2025-11-25 01:20:03 | ERROR    | error when insert heart rate data: Object of type HeartRateDataDB is not JSON serializable
+2025-11-25 01:20:03 | INFO     | Closing DB session
+2025-11-25 01:25:20 | INFO     | Initializing database
+2025-11-25 01:25:20 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:25:20 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:25:24 | INFO     | Upload heart data: 0001
+2025-11-25 01:25:24 | INFO     | uploading heart data from user 0001
+2025-11-25 01:25:24 | INFO     | Opening database session
+2025-11-25 01:25:24 | INFO     | Begin DB transaction
+2025-11-25 01:25:24 | INFO     | Initializing Redis connection pool
+2025-11-25 01:25:24 | INFO     | init cache aside repository
+2025-11-25 01:25:24 | INFO     | insert heart rate data
+2025-11-25 01:25:24 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:25:24 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:25:24 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:25:24 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:25:24 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:25:24 | INFO     | set cache - key : heart_rate:0001:latest
+2025-11-25 01:25:24 | ERROR    | error when insert heart rate data: Object of type HeartRateDataDB is not JSON serializable
+2025-11-25 01:25:24 | INFO     | Closing DB session
+2025-11-25 01:25:37 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:25:40 | INFO     | Initializing database
+2025-11-25 01:25:40 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:25:40 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:25:45 | INFO     | Upload heart data: 0001
+2025-11-25 01:25:45 | INFO     | uploading heart data from user 0001
+2025-11-25 01:25:45 | INFO     | Opening database session
+2025-11-25 01:25:45 | INFO     | Begin DB transaction
+2025-11-25 01:25:45 | INFO     | Initializing Redis connection pool
+2025-11-25 01:25:45 | INFO     | init cache aside repository
+2025-11-25 01:25:45 | INFO     | insert heart rate data
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:25:45 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:25:45 | INFO     | Closing DB session
+2025-11-25 01:28:21 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:28:24 | INFO     | Initializing database
+2025-11-25 01:28:24 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:28:24 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:28:28 | INFO     | Upload heart data: 0001
+2025-11-25 01:28:28 | INFO     | uploading heart data from user 0001
+2025-11-25 01:28:28 | INFO     | Opening database session
+2025-11-25 01:28:28 | INFO     | Begin DB transaction
+2025-11-25 01:28:28 | INFO     | Initializing Redis connection pool
+2025-11-25 01:28:28 | INFO     | init cache aside repository
+2025-11-25 01:28:28 | INFO     | insert heart rate data
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:28:28 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:28:28 | INFO     | Closing DB session
+2025-11-25 01:33:22 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:33:24 | INFO     | Initializing database
+2025-11-25 01:33:25 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:33:25 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:33:25 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:33:27 | INFO     | Initializing database
+2025-11-25 01:33:27 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:33:27 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:38:22 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:38:25 | INFO     | Initializing database
+2025-11-25 01:38:25 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:38:25 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:38:25 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:38:28 | INFO     | Initializing database
+2025-11-25 01:38:28 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:38:28 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:41:49 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:41:51 | INFO     | Initializing database
+2025-11-25 01:41:51 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:41:51 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:41:51 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:41:53 | INFO     | Initializing database
+2025-11-25 01:41:53 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:41:53 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:42:09 | INFO     | Upload heart data: 0001
+2025-11-25 01:42:09 | INFO     | uploading heart data from user 0001
+2025-11-25 01:42:09 | INFO     | Opening database session
+2025-11-25 01:42:09 | INFO     | Begin DB transaction
+2025-11-25 01:42:09 | INFO     | Initializing Redis connection pool
+2025-11-25 01:42:09 | INFO     | init cache aside repository
+2025-11-25 01:42:09 | INFO     | insert heart rate data
+2025-11-25 01:42:09 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:42:09 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:42:09 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:42:09 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:42:09 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:42:09 | INFO     | set cache - key : heart_rate:0001:latest
+2025-11-25 01:42:09 | ERROR    | error when insert heart rate data: Object of type HeartRateDataDB is not JSON serializable
+2025-11-25 01:42:09 | INFO     | Closing DB session
+2025-11-25 01:44:48 | INFO     | Initializing database
+2025-11-25 01:44:48 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:44:48 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:45:21 | INFO     | Upload heart data: 0001
+2025-11-25 01:45:21 | INFO     | uploading heart data from user 0001
+2025-11-25 01:45:21 | INFO     | Opening database session
+2025-11-25 01:45:21 | INFO     | Begin DB transaction
+2025-11-25 01:45:21 | INFO     | Initializing Redis connection pool
+2025-11-25 01:45:21 | INFO     | init cache aside repository
+2025-11-25 01:45:21 | INFO     | insert heart rate data
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:45:21 | INFO     | set cache - key : heart_rate:0001:latest
+2025-11-25 01:45:21 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:45:21 | INFO     | Closing DB session
+2025-11-25 01:47:39 | INFO     | Upload heart data: 0001
+2025-11-25 01:47:39 | INFO     | uploading heart data from user 0001
+2025-11-25 01:47:39 | INFO     | Opening database session
+2025-11-25 01:47:39 | INFO     | Begin DB transaction
+2025-11-25 01:47:39 | INFO     | init cache aside repository
+2025-11-25 01:47:39 | INFO     | insert heart rate data
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:47:39 | INFO     | set cache - key : heart_rate:0001:latest
+2025-11-25 01:47:39 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:47:39 | INFO     | Closing DB session
+2025-11-25 01:48:19 | INFO     | System v1.0.0 Shutting down...
+2025-11-25 01:48:22 | INFO     | Initializing database
+2025-11-25 01:48:22 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:48:22 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:48:25 | INFO     | Upload heart data: 0001
+2025-11-25 01:48:25 | INFO     | uploading heart data from user 0001
+2025-11-25 01:48:25 | INFO     | Opening database session
+2025-11-25 01:48:25 | INFO     | Begin DB transaction
+2025-11-25 01:48:25 | INFO     | Initializing Redis connection pool
+2025-11-25 01:48:25 | INFO     | init cache aside repository
+2025-11-25 01:48:25 | INFO     | insert heart rate data
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 1, 'timestamp': '2025-11-25 08:30:00', 'value': 72.0}
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 2, 'timestamp': '2025-11-25 08:31:00', 'value': 74.0}
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 3, 'timestamp': '2025-11-25 08:32:00', 'value': 78.0}
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 4, 'timestamp': '2025-11-25 08:33:00', 'value': 81.0}
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001, data : {'rate_id': 5, 'timestamp': '2025-11-25 08:34:00', 'value': 79.0}
+2025-11-25 01:48:25 | INFO     | set cache - key : heart_rate:0001:latest
+2025-11-25 01:48:25 | INFO     | get cache - key : heart_rate:0001:latest, value : [{"rate_id": 1, "timestamp": "2025-11-25 08:30:00", "value": 72.0}, {"rate_id": 2, "timestamp": "2025-11-25 08:31:00", "value": 74.0}, {"rate_id": 3, "timestamp": "2025-11-25 08:32:00", "value": 78.0}, {"rate_id": 4, "timestamp": "2025-11-25 08:33:00", "value": 81.0}, {"rate_id": 5, "timestamp": "2025-11-25 08:34:00", "value": 79.0}]
+2025-11-25 01:48:25 | INFO     | insert heart rate data - user : 0001
+2025-11-25 01:48:25 | INFO     | Closing DB session
+2025-11-25 01:48:56 | INFO     | Initializing database
+2025-11-25 01:48:56 | INFO     | System v1.0.0 Starting up...
+2025-11-25 01:48:56 | INFO     | website: http://0.0.0.0:8000/docs
+2025-11-25 01:48:57 | INFO     | System v1.0.0 Shutting down...

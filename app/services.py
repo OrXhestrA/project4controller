@@ -30,19 +30,14 @@ class DataService:
     async def upload_heart_data(request: HeartDataRequest) -> HeartDataResponse:
         log.info(f"uploading heart data from user {request.user_id}")
 
-        # TODO get from db or interface
-        # Example: data = await db.insert(HeartData)
-        # Example: data = await interface
-
-        # data stored in db or cache for now
         async for db in get_db():
             redis_client = await get_redis_pool()
             repo = CacheAsideRepository(db, redis_client)
 
             try:
+                log.info(f"insert heart rate data")
                 heart_data_list = [hd.dict() for hd in request.heart_rate]
                 await repo.insert_heart_rate_data(request.user_id, heart_data_list)
-
                 return HeartDataResponse()
             except Exception as e:
                 log.error(f"error when insert heart rate data: {e}")
@@ -123,6 +118,7 @@ class PredictService:
         """Set Parameters Storage"""
         self.predict_params.update(params)
         log.info(f"predict params updated: {self.predict_params}")
+        return GenericResponse()
 
     async def predict_for_user(
             self,
@@ -143,7 +139,19 @@ class PredictService:
         log.info(f"predict for user {user_id}, use model {models}")
 
         # TODO get data and process data
-        user_data = {"user_id": user_id}
+        heart_data = []
+        async for db in get_db():
+            redis_client = await get_redis_pool()
+            repo = CacheAsideRepository(db, redis_client)
+            heart_data = await repo.get_latest_heart_rate_data(user_id)
+
+        user_data = {
+            "user_id": user_id,
+            "heart_data": heart_data,
+            "sampling_rate": 1,
+            "timestamp": datetime.now().strftime("%y-%m-%d %H:%M:%S")
+        }
+
         predictions = {}
 
         if models[0]:
