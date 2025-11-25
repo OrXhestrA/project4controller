@@ -51,13 +51,11 @@ class HeartRateData(BaseModel):
     """
     心率数据
     """
-    rate_id: int = Field(..., description="心率数据ID")
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
     value: float = Field(..., ge=0, le=200, description="心率值")
 
     def to_dict(self):
         return {
-            "user_id": self.user_id,
             "timestamp": self.timestamp.isoformat(),
             "value": self.value
         }
@@ -75,27 +73,77 @@ class HeartDataRequest(UserIdRequest):
     heart_rate: List[HeartRateData]
 
 
-class FrameData(BaseModel):
+class VideoFrameMetaData(BaseModel):
     """
     视频帧数据
     """
-    frame_id: int
+    frame_id: int = Field(..., ge=0, description="帧ID")
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
-    format: str = Field(..., examples=["jpeg"], description="图片格式")
-    data: str = Field(..., description="图片数据 base64 编码")
+
+    @field_validator("timestamp")
+    def validate_timestamp(cls, value):
+        try:
+            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            raise ValueError("Invalid timestamp format")
+        return value
 
 
-class VideoDataRequest(UserIdRequest):
-    frames: List[FrameData]
+class VideoUploadRequest(UserIdRequest):
+    """
+    Video Frames Upload Request (multipart/form-data)
+    """
+    session_id: str = Field(..., description="会话ID")
+    frame_id: int = Field(..., ge=0, description="帧ID")
+    timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
+    format: str = Field(default="jpg",examples=["jpg", "png"], description="帧格式")
+
+    @field_validator("timestamp")
+    def validate_timestamp(cls, value):
+        try:
+            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            raise ValueError("Invalid timestamp format")
+        return value
+
+
+class VideoFrameInfo(BaseModel):
+    """
+    Video Frames Information
+    """
+    frame_id: int = Field(..., ge=0, description="帧ID")
+    user_id: str
+    session_id: str
+    frame_id: int
+    timestamp: str
+    format: str
+    s3_path: str = Field(..., description="S3存储路径")
+    local_path: str = Field(..., description="本地存储路径")
+
+
+class VideoBatchUploadRequest(BaseModel):
+    """
+    Video Batch Frames Upload Meta Data
+    """
+    user_id: str
+    session_id: str
+    frames: List[VideoFrameMetaData]
 
 
 class TaskData(BaseModel):
     """
     管制任务数据
     """
-    task_id: int
     task: str = Field(..., examples=["task1"], description="任务名称")
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
+
+    @field_validator("timestamp")
+    def validate_timestamp(cls, value):
+        try:
+            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            raise ValueError("Invalid timestamp format")
+        return value
 
 
 class UserDataRequest(UserIdRequest):
@@ -116,6 +164,14 @@ class BioValue(BaseModel):
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
     value_1: Optional[float] = None
     value_2: Optional[float] = None
+
+    @field_validator("timestamp")
+    def validate_timestamp(cls, value):
+        try:
+            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            raise ValueError("Invalid timestamp format")
+        return value
 
 
 class BioDataRequest(UserIdRequest):
@@ -157,6 +213,7 @@ class HeartDataResponse(GenericResponse):
 
 class VideoDataResponse(GenericResponse):
     message: str = Field(default="video data upload successfully.")
+    data: Optional[dict] = Field(None, description="Upload Result Details.")
 
 
 class UserDataResponse(GenericResponse):
@@ -165,5 +222,4 @@ class UserDataResponse(GenericResponse):
 
 class BioDataResponse(GenericResponse):
     message: str = Field(default="bio data upload successfully.")
-
 
