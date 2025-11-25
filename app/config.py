@@ -64,6 +64,30 @@ class Settings(BaseSettings):
         env="LOG_FILE"
     )
 
+    # 存储模式：local（本地）, s3（AWS S3）, minio（MinIO）
+    STORAGE_MODE: str = "local"
+
+    # 本地存储配置
+    LOCAL_STORAGE_PATH: str = "data/videos"
+    LOCAL_CACHE_PATH: str = "data/cache"
+
+    # S3/MinIO 配置
+    S3_ENDPOINT: str = ""  # MinIO: http://localhost:9000
+    S3_ACCESS_KEY: str = ""
+    S3_SECRET_KEY: str = ""
+    S3_BUCKET_NAME: str = "video-frames"
+    S3_REGION: str = "us-east-1"
+    USE_SSL: bool = True
+
+    # 视频处理配置
+    MAX_FRAME_SIZE_MB: int = 10  # 单帧最大大小
+    ALLOWED_IMAGE_FORMATS: List[str] = ["jpg", "jpeg", "png"]
+    VIDEO_FRAME_QUALITY: int = 95  # JPEG 压缩质量
+
+    # 缓存配置
+    ENABLE_LOCAL_CACHE: bool = True  # 是否启用本地缓存
+    CACHE_EXPIRY_HOURS: int = 24  # 缓存过期时间
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
