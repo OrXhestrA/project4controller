@@ -221,8 +221,33 @@ class CacheAsideRepository:
 
     """视频数据"""
 
-    # TODO
     async def insert_video_data(self, data: VideoDataDB) -> None:
+        """
+        插入视频文本数据
+        :param data:
+        :return:
+        """
+        try:
+            new_record = VideoDataDB(
+                user_id=data.user_id,
+                session_id=data.session_id,
+                frame_id=data.frame_id,
+                timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                format=data.format,
+                s3_path=data.s3_path,
+                local_path=data.local_path,
+                file_size=data.file_size
+            )
+            self.db_session.add(new_record)
+            await self.db_session.commit()
+            deleted = await self.redis.delete(f"video_data:{data.user_id}:{data.session_id}:{data.frame_id}")
+            log.info(f"Delete cache - key : {f'video_data:{data.user_id}:{data.session_id}:{data.frame_id}'} - deleted : {deleted}")
+        except Exception as e:
+            log.warning(f"Insert video data error - user {data.user_id} - error : {e}")
+            await self.db_session.rollback()
+
+    # TODO
+    async def get_video_data(self, user_id: str, session_id: str, frame_id: int):
         pass
 
     """生化数据"""

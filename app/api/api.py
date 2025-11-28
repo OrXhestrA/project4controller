@@ -40,7 +40,6 @@ async def upload_heart_data(request: HeartDataRequest) -> HeartDataResponse:
     return await StorageService.upload_heart_data(request=request)
 
 
-# TODO
 @router.post(
     "/upload_video_data",
     response_model=VideoDataResponse,
