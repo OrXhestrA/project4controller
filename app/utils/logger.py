@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from loguru import logger
-from app.config import settings
+from app.config.base_config import settings
 
 
 def setup_logger():

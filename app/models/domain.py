@@ -31,8 +31,6 @@ class VideoDataDB(Base):
     local_path = Column(String(512), nullable=False)
 
     file_size = Column(Integer, nullable=False)
-    width = Column(Integer, nullable=False)
-    height = Column(Integer, nullable=False)
 
     __table_args__ = (
         Index("idx_user_timestamp", "user_id", "timestamp"),
@@ -44,7 +42,7 @@ class VideoDataDB(Base):
 class UserDataDB(Base):
     __tablename__ = 'user_data'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(String(255), nullable=False)
+    user_id = Column(String(255), nullable=False, unique=True)
     age = Column(Integer, nullable=False)
     gender = Column(Integer, nullable=False)
     occupation = Column(String(255), nullable=False)

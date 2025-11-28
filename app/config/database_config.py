@@ -5,23 +5,15 @@ from sqlalchemy.ext.asyncio import (
 )
 import redis.asyncio as redis
 from typing import AsyncGenerator
-from app.utils import log
-from app.config import settings
-from app.db_models import Base
-
-DATABASE_URL = settings.DATABASE_URL
-REDIS_URL = settings.REDIS_URL
-REDIS_TTL = settings.REDIS_TTL
-REDIS_PASSWORD = settings.REDIS_PASSWORD
-
-DATABASE_ECHO = settings.DATABASE_ECHO
+from app.utils.logger import log
+from app.config.base_config import settings
+from app.models.domain import Base
 
 engine = create_async_engine(
-    DATABASE_URL,
+    settings.DATABASE_URL,
     echo=True,
     future=True
 )
-
 async_session_maker = async_sessionmaker(
     bind=engine,
     class_=AsyncSession,
@@ -39,8 +31,8 @@ async def get_redis_pool():
     if _redis is None:
         log.info("Initializing Redis connection pool")
         _redis = redis.from_url(
-            REDIS_URL,
-            password=REDIS_PASSWORD if REDIS_PASSWORD else None,
+            settings.REDIS_URL,
+            password=settings.REDIS_PASSWORD if settings.REDIS_PASSWORD else None,
             encoding="utf-8",
             decode_responses=True
         )
