@@ -15,6 +15,7 @@ from app.config.database_config import get_db, get_redis_pool
 from app.repository.cache_aside_storage import CacheAsideRepository
 from app.repository.video_storage import VideoStorage
 
+
 class StorageService:
     """Data Upload & Getter"""
 

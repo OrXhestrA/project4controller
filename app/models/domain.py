@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, Index
 from sqlalchemy.ext.declarative import declarative_base
 
+# 自动建表
 Base = declarative_base()
 
 

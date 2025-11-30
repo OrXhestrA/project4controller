@@ -57,6 +57,7 @@ class ModelInterface:
                 return None
 
             input_tensor = predictor.preprocess_data(data, sampling_rate=1)
+
             if input_tensor is None:
                 log.error("heart model error: no preprocess data")
                 return None
@@ -90,6 +91,7 @@ class ModelInterface:
         try:
             text_data = await StorageService.get_text_data()
             video_data = await StorageService.get_video_data()
+
             if video_data is None:
                 log.error("video model error: no video data")
                 return None
