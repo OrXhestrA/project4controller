@@ -51,7 +51,8 @@ class VideoStorage:
             "local_path": "",
         }
         """
-
+        if file is None:
+            raise ValueError("File is None")
         storage_path = f"video_{user_id}_{timestamp.strftime('%Y%m%d%H%M%S')}.{video_format}"
 
         result = {
@@ -98,10 +99,11 @@ class VideoStorage:
         :param storage_path:
         :return: save path
         """
-        with open(os.path.join(self.local_path, storage_path), "wb") as f:
-            f.write(file.file.read())
-        log.info(f"保存帧到本地: {self.local_path}")
-        return os.path.join(self.local_path, storage_path)
+        if file:
+            with open(os.path.join(self.local_path, storage_path), "wb") as f:
+                f.write(file.file.read())
+            log.info(f"保存帧到本地: {self.local_path}")
+            return os.path.join(self.local_path, storage_path)
 
     async def get_frame(
             self,
@@ -116,13 +118,13 @@ class VideoStorage:
         """
         try:
             log.info(f"Get frame - user {user_id}")
-            root_path = Path(__file__).resolve().parent.parent.parent
+
             video_path_list = await repo.get_video_data(user_id)
             print(video_path_list)
             video_list = []
             if self.mode == "local":
                 for video_path in video_path_list:
-                    async with aiofiles.open(os.path.join(root_path, video_path), "rb") as f:
+                    async with aiofiles.open(video_path, "rb") as f:
                         video_list.append(await f.read())
             else:
                 for video_path in video_path_list:

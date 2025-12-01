@@ -10,5 +10,5 @@ venv/
 build/
 .pytest_cache
 tests
-data
 pytest.ini
+data/mysql/*.sock

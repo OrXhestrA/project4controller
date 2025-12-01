@@ -15,7 +15,7 @@ services:
       - S3_BUCKET_NAME=video-frames
       - S3_REGION=us-east-1
       - USE_SSL=false
-      - STORAGE_MODE=s3
+      - STORAGE_MODE=local
       - LOG_LEVEL=INFO
       - DEBUG=False
     depends_on:
@@ -25,7 +25,7 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./data/videos:/app/data/videos
-      - ./data/cache:/app/data/cache
+
 
   mysql:
     image: mysql:8.0

@@ -135,9 +135,9 @@ class HeartPredictor:
                 log.error("Data is empty")
                 return None
 
-            if len(data) < self.required_min_points:
-                log.error(f"Data length is too short - required_min_points : {self.required_min_points}")
-                return None
+            # if len(data) < self.required_min_points:
+            #     log.error(f"Data length is too short - required_min_points : {self.required_min_points}")
+            #     return None
 
             valid_mask = (data >= 30) & (data <= 200)
             if not np.all(valid_mask):

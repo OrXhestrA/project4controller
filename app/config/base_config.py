@@ -68,7 +68,7 @@ class Settings(BaseSettings):
     STORAGE_MODE: str = "local"
 
     # 本地存储配置
-    LOCAL_STORAGE_PATH: str = "data/local/videos"
+    LOCAL_STORAGE_PATH: str = "data/videos"
 
     # S3/MinIO 配置
     S3_ENDPOINT: str = "https://localhost:9000"  # MinIO: https://localhost:9000
