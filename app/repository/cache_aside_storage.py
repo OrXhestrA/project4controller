@@ -1,7 +1,5 @@
-from sqlalchemy.engine.row import ROMappingKeysValuesView
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, desc, and_, update
-from sqlalchemy.dialects.mysql import insert
+from sqlalchemy import select, desc, and_
 from app.models.domain import (
     HeartRateDataDB,
     VideoDataDB,
@@ -12,16 +10,13 @@ from app.models.domain import (
 from app.models.request import (
     HeartDataRequest,
     UserDataRequest,
-    VideoUploadRequest, BioDataRequest
+    BioDataRequest
 )
 from datetime import datetime, timedelta
 import json
 from app.utils.logger import log
 from typing import (
-    List,
-    Any,
-    Optional,
-    Dict,
+    Any
 )
 from redis import Redis
 
@@ -230,25 +225,51 @@ class CacheAsideRepository:
         try:
             new_record = VideoDataDB(
                 user_id=data.user_id,
-                session_id=data.session_id,
-                frame_id=data.frame_id,
-                timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                timestamp=datetime.now(),
                 format=data.format,
                 s3_path=data.s3_path,
-                local_path=data.local_path,
-                file_size=data.file_size
+                local_path=data.local_path
             )
             self.db_session.add(new_record)
             await self.db_session.commit()
-            deleted = await self.redis.delete(f"video_data:{data.user_id}:{data.session_id}:{data.frame_id}")
-            log.info(f"Delete cache - key : {f'video_data:{data.user_id}:{data.session_id}:{data.frame_id}'} - deleted : {deleted}")
+            deleted = await self.redis.delete(f"video_data:{data.user_id}:latest")
+            log.info(f"Delete cache - key : {f'video_data:{data.user_id}:latest'} - deleted : {deleted}")
         except Exception as e:
             log.warning(f"Insert video data error - user {data.user_id} - error : {e}")
             await self.db_session.rollback()
 
-    # TODO
-    async def get_video_data(self, user_id: str, session_id: str, frame_id: int):
-        pass
+    async def get_video_data(self, user_id: str):
+        """
+        Get Video Data
+        :param user_id:
+        :param session_id:
+        :param frame_id:
+        :return:
+        """
+        log.info(f"Get video data - user {user_id}")
+        cache_key = f"video_data:{user_id}:latest"
+        cache_data = await self.redis.get(cache_key)
+        if cache_data:
+            log.info(f"Get cache - key : {cache_key}")
+            return json.loads(cache_data)
+        log.info(f"Get video data from db - user {user_id}")
+        query = select(VideoDataDB).where(
+            and_(VideoDataDB.user_id == user_id,
+                 VideoDataDB.timestamp >= datetime.now() - timedelta(minutes=30))
+        ).order_by(
+            desc(VideoDataDB.timestamp)
+        )
+        result = await self.db_session.execute(query)
+        records = result.scalars().all()
+        if records:
+            if records[0].s3_path:
+                data = [record.s3_path for record in records]
+            else:
+                data = [record.local_path for record in records]
+            await self.redis.set(cache_key, json.dumps(data), ex=self.cache_ttl)
+            log.info(f"Set cache - key : {cache_key}")
+            return data
+        return None
 
     """生化数据"""
     async def insert_bio_data(self, request: BioDataRequest) -> None:

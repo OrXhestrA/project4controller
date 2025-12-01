@@ -23,20 +23,13 @@ class VideoDataDB(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(String(255), nullable=False)
-    session_id = Column(String(255), nullable=False)
-    frame_id = Column(Integer, nullable=False)
     timestamp = Column(DateTime, nullable=False)
     format = Column(String(50), nullable=False, default='jpg')
-
-    s3_path = Column(String(512), nullable=False)
-    local_path = Column(String(512), nullable=False)
-
-    file_size = Column(Integer, nullable=False)
+    s3_path = Column(String(512), nullable=True)
+    local_path = Column(String(512), nullable=True)
 
     __table_args__ = (
         Index("idx_user_timestamp", "user_id", "timestamp"),
-        Index("idx_session", "session_id", "frame_id"),
-        Index("idx_user_session", "user_id", "session_id")
     )
 
 

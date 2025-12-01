@@ -17,14 +17,6 @@ class BaseDto(BaseModel):
     """
     timestamp: str = Field(..., examples=["2021-01-01 00:00:00"], description="时间戳 YYYY-MM-DD hh:mm:ss")
 
-    @field_validator("timestamp")
-    def validate_timestamp(cls, value):
-        try:
-            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
-        except ValueError:
-            raise ValueError("Invalid timestamp format")
-        return value
-
 
 class HeartRateDto(BaseDto):
     """
@@ -58,22 +50,17 @@ class VideoFrameInfoDto(BaseDto):
     """
     视频帧信息 (返回)
     """
-    frame_id: int = Field(..., ge=0, description="帧ID")
-    session_id: str = Field(..., description="会话ID")
     format: str = Field(
         default="jpg",
         examples=["jpg", "png", "jpeg"],
         description="帧格式"
     )
-    s3_path: str = Field(..., description="S3存储路径")
-    local_path: str = Field(..., description="本地存储路径")
+    s3_path: Optional[str] = Field(..., description="S3存储路径")
+    local_path: Optional[str] = Field(..., description="本地存储路径")
 
     def to_dict(self):
         return {
-            "frame_id": self.frame_id,
-            "user_id": self.user_id,
-            "session_id": self.session_id,
-            "timestamp": self.timestamp.isoformat(),
+            "timestamp": self.timestamp,
             "format": self.format,
             "s3_path": self.s3_path,
             "local_path": self.local_path

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import (
     APIRouter,
     HTTPException,
@@ -46,9 +48,17 @@ async def upload_heart_data(request: HeartDataRequest) -> HeartDataResponse:
     tags=["Data Upload"],
     summary="上传视频数据"
 )
-async def upload_video_data(request: VideoUploadRequest) -> VideoDataResponse:
-    log.info(f"Upload video data: {request.user_id}")
-    # TODO
+async def upload_video_data(
+        user_id: str = Form(...),
+        format: str = Form(...),
+        file: UploadFile = File(...)
+) -> VideoDataResponse:
+    log.info(f"Upload video data: {user_id}")
+    request = VideoUploadRequest(
+        user_id=user_id,
+        format=format,
+        file=file
+    )
     return await StorageService.upload_video_data(request=request)
 
 

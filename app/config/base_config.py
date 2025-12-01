@@ -64,15 +64,14 @@ class Settings(BaseSettings):
         env="LOG_FILE"
     )
 
-    # 存储模式：local（本地）, s3（AWS S3）, minio（MinIO）
+    # 存储模式：local（本地）, s3（AWS S3）
     STORAGE_MODE: str = "local"
 
     # 本地存储配置
-    LOCAL_STORAGE_PATH: str = "data/videos"
-    LOCAL_CACHE_PATH: str = "data/cache"
+    LOCAL_STORAGE_PATH: str = "data/local/videos"
 
     # S3/MinIO 配置
-    S3_ENDPOINT: str = ""  # MinIO: http://localhost:9000
+    S3_ENDPOINT: str = "https://localhost:9000"  # MinIO: https://localhost:9000
     S3_ACCESS_KEY: str = ""
     S3_SECRET_KEY: str = ""
     S3_BUCKET_NAME: str = "video-frames"

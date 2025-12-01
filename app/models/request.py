@@ -71,27 +71,12 @@ class VideoUploadRequest(BaseRequest):
     """
     视频上传请求
     """
-    session_id: str = Field(..., description="会话ID")
-    frame_id: int = Field(..., ge=0, description="帧ID")
-    timestamp: str = Field(
-        ...,
-        examples=["2021-01-01 00:00:00"],
-        description="时间戳 YYYY-MM-DD hh:mm:ss"
-    )
     format: str = Field(
         default="jpg",
         examples=["jpg", "png", "jpeg"],
         description="帧格式"
     )
     file: UploadFile = Field(..., description="视频帧文件")
-
-    @field_validator("timestamp")
-    def validate_timestamp(cls, value):
-        try:
-            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
-        except ValueError:
-            raise ValueError("Invalid timestamp format")
-        return value
 
 
 class UserDataRequest(BaseRequest):

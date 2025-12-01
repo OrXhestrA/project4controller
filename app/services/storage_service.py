@@ -5,7 +5,6 @@ from typing import (
     Optional,
     Any
 )
-from fastapi import UploadFile
 from app.models.request import *
 from app.models.response import *
 from app.models.dto import *
@@ -13,7 +12,7 @@ from app.models.domain import *
 from app.utils.logger import log
 from app.config.database_config import get_db, get_redis_pool
 from app.repository.cache_aside_storage import CacheAsideRepository
-from app.repository.video_storage import VideoStorage
+from app.repository.video_storage import storage
 
 
 class StorageService:
@@ -97,37 +96,37 @@ class StorageService:
         log.info(f"Upload video data from user {request.user_id}")
         async for db_session in get_db():
             try:
-                storage = VideoStorage()
-                storage_result = await storage.save_frame(
+                redis_client = await get_redis_pool()
+                timestamp = datetime.now()
+                result = await storage.save_frame(
                     file=request.file,
                     user_id=request.user_id,
-                    session_id=request.session_id,
-                    frame_id=request.frame_id,
-                    format=request.format
-                )
-                video_data = VideoDataDB(
-                    user_id=request.user_id,
-                    session_id=request.session_id,
-                    frame_id=request.frame_id,
-                    timestamp=datetime.now(),
-                    format=request.format,
-                    s3_path=storage_result["s3_path"],
-                    local_path=storage_result["local_path"],
-                    file_size=storage_result["file_size"]
+                    timestamp=timestamp,
+                    video_format=request.format,
+                    repo=CacheAsideRepository(db_session, redis_client)
                 )
 
-                redis_client = await get_redis_pool()
-                repo = CacheAsideRepository(db_session, redis_client)
-                await repo.insert_video_data(video_data)
                 video_info_data = VideoFrameInfoDto(
-                    frame_id=video_data.frame_id,
-                    session_id=video_data.session_id,
-                    timestamp=video_data.timestamp,
-                    format=video_data.format,
-                    s3_path=video_data.s3_path,
-                    local_path=video_data.local_path
+                    timestamp=timestamp.isoformat(),
+                    format=request.format,
+                    s3_path=result.get("s3_path"),
+                    local_path=result.get("local_path")
                 )
                 return VideoDataResponse(data=video_info_data)
             except Exception as e:
                 log.error(f"Insert video data error - user {request.user_id} - error : {e}")
                 raise e
+
+    @staticmethod
+    async def get_video_data(user_id: str) -> List[str]:
+        """
+        Get Video Data
+        :param user_id:
+        :return: List[image]
+        """
+        async for db_session in get_db():
+            redis_client = await get_redis_pool()
+            return await storage.get_frame(
+                user_id=user_id,
+                repo=CacheAsideRepository(db_session, redis_client)
+            )

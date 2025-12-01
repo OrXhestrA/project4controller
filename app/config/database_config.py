@@ -1,3 +1,5 @@
+import boto3
+from botocore.exceptions import ClientError
 from sqlalchemy.ext.asyncio import (
     create_async_engine,
     AsyncSession,
@@ -67,3 +69,37 @@ async def init_db():
     log.info("Initializing database")
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+
+async def get_s3_client():
+    """
+    Get s3 Client
+    :return:
+    """
+    log.info("Initializing S3 client")
+    s3_client = boto3.client(
+        's3',
+        endpoint_url=settings.S3_ENDPOINT_URL if settings.S3_ENDPOINT else None,
+        aws_access_key_id=settings.S3_ACCESS_KEY,
+        aws_secret_access_key=settings.S3_SECRET_KEY,
+        region_name=settings.S3_REGION,
+        use_ssl=settings.USE_SSL,
+    )
+    await _ensure_bucket_exists(s3_client)
+    return s3_client
+
+
+async def _ensure_bucket_exists(s3_client: boto3.client):
+    """
+    Ensure s3 bucket exist, if not exist, try to create bucket
+    :return: None
+    """
+    try:
+        s3_client.head_bucket(Bucket=settings.S3_BUCKET_NAME)
+        log.info(f"Bucket {settings.S3_BUCKET_NAME} exists")
+    except ClientError as e:
+        try:
+            s3_client.create_bucket(Bucket=settings.S3_BUCKET_NAME)
+            log.info(f"Bucket {settings.S3_BUCKET_NAME} created")
+        except ClientError as e:
+            log.error(f"Error creating S3 bucket : {e}")
