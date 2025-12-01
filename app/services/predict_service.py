@@ -5,6 +5,8 @@ from typing import (
     Any,
     List
 )
+
+from app.model.video_predict import VideoFatiguePredictor
 from app.utils.logger import log
 from app.services.storage_service import StorageService
 from app.config.base_config import settings
@@ -76,32 +78,25 @@ class ModelInterface:
     async def predict_video(user_id: str) -> Optional[float]:
         """
         Video Model Predict Interface
-        # TODO load model
-            import torch
-            model = torch.load('model.pth')
-            model.eval()
-            with torch.no_grad():
-                result = model(preprocessed_data)
-                return float(result)
         :param user_id:
         :return:
         """
         log.info(f"video model predict - user : {user_id}")
-
+        get = StorageService()
+        frames = await get.get_video_data(user_id)
         try:
-            text_data = await StorageService.get_text_data()
-            video_data = await StorageService.get_video_data()
+            # 实例化视频预测器，使用占位符路径
+            predictor = VideoFatiguePredictor(model_path='app/weights/video_fatigue_model.pth')
 
-            if video_data is None:
-                log.error("video model error: no video data")
+            # 调用预测方法。注意：这里我们传入 None，让预测器返回模拟值进行测试
+            fatigue_probability = predictor.predict_fatigue(user_id, frames_data=frames)
+
+            if fatigue_probability is None:
+                log.error("video model error: prediction failed or data missing")
                 return None
 
-            model = torch.load('model.pth')
-            model.eval()
-
-            with torch.no_grad():
-                result = model(text_data, video_data)
-                return float(result)
+            log.debug(f"video model result: {fatigue_probability}")
+            return fatigue_probability
         except Exception as e:
             log.error(f"video model error: {e}")
             return None
@@ -141,7 +136,7 @@ class ModelInterface:
                 heart = await ModelInterface.predict_heart(user_id)
             if settings.DEFAULT_MODELS[2]:
                 video = await ModelInterface.predict_video(user_id)
-            sum = mixed + heart + video
+            sum = (mixed + heart + video) / 3
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,

@@ -1,3 +1,14 @@
-data/mysql/
-
-*.sock
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+venv/
+.venv/
+build/
+.pytest_cache
+tests
+data
+pytest.ini

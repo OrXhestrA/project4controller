@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     )
     # [mixed, heart, video]
     DEFAULT_MODELS: List[int] = Field(
-        default=[0, 1, 0],
+        default=[1, 1, 1],
         min_items=3,
         max_items=3,
         env="DEFAULT_MODELS",

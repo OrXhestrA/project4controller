@@ -13,3 +13,5 @@ scipy==1.16.3
 SQLAlchemy==2.0.44
 torch==2.9.1
 uvicorn==0.38.0
+mediapipe
+opencv-contrib-python
