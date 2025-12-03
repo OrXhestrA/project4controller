@@ -97,7 +97,7 @@ class PredictRequest(BaseRequest):
     """
     预测请求
     """
-    session_id: str = Field(..., description="会话ID")
+    task_id: str = Field(..., description="任务ID")
     user_ids: List[str] = Field(
         ...,
         description="用户ID列表",

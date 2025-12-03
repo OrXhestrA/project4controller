@@ -51,8 +51,6 @@ class VideoStorage:
             "local_path": "",
         }
         """
-        if file is None:
-            raise ValueError("File is None")
         storage_path = f"video_{user_id}_{timestamp.strftime('%Y%m%d%H%M%S')}.{video_format}"
 
         result = {
