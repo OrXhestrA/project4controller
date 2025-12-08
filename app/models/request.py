@@ -5,7 +5,7 @@ from pydantic import (
     field_validator
 )
 from typing import (
-    List
+    List, Optional
 )
 from fastapi import UploadFile
 from app.models.dto import (
@@ -26,38 +26,24 @@ class SetParamsRequest(BaseRequest):
     """
     参数设置请求
     """
-    current_timestamp: str = Field(
-        ...,
-        examples=["2021-01-01 00:00:00"],
-        description="当前时间戳 YYYY-MM-DD hh:mm:ss"
-    )
-    predict_time_length: str = Field(
-        ...,
-        examples=["10min"],
+    predict_time_length: Optional[int] = Field(
+        None,
         description="预测时间长度"
     )
     thresholds: List[float] = Field(
-        ...,
+        None,
         min_length=5,
         max_length=5,
         description="阈值列表",
-        examples=[0.1, 0.3, 0.5, 0.7, 0.9]
+        examples=[[0.1, 0.3, 0.5, 0.7, 0.9]]
     )
     models: List[int] = Field(
-        ...,
+        None,
         min_length=3,
         max_length=3,
         description="模型启用状态 [mixed, heart, video]",
-        examples=[1, 1, 1]
+        examples=[[1, 1, 1]]
     )
-
-    @field_validator("current_timestamp")
-    def validate_timestamp(cls, value):
-        try:
-            datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
-        except ValueError:
-            raise ValueError("Invalid timestamp format")
-        return value
 
 
 class HeartDataRequest(BaseRequest):

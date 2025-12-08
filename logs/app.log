@@ -3655,3 +3655,126 @@ video_predict_stats
 2025-12-08 12:53:33 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.025, 'predict_heart': 0.0, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-08 12:53:33'}]
 2025-12-08 12:53:33 | INFO     | Closing DB session
 2025-12-08 12:53:43 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 12:55:02 | INFO     | Initializing database
+2025-12-08 12:55:02 | INFO     | System v1.0.0 Starting up...
+2025-12-08 12:55:02 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 12:55:06 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-08 12:55:06 | INFO     | mixed model predict - user : 0004
+2025-12-08 12:55:06 | INFO     | heart model predict - user : 0004
+2025-12-08 12:55:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 12:55:06 | INFO     | Opening database session
+2025-12-08 12:55:06 | INFO     | Begin DB transaction
+2025-12-08 12:55:06 | INFO     | Initializing Redis connection pool
+2025-12-08 12:55:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 12:55:06 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-08 12:55:06 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 12:55:06 | WARNING  | Data is empty
+2025-12-08 12:55:06 | WARNING  | heart model error: no preprocess data
+2025-12-08 12:55:06 | INFO     | video model predict - user : 0004
+2025-12-08 12:55:06 | INFO     | Opening database session
+2025-12-08 12:55:06 | INFO     | Begin DB transaction
+2025-12-08 12:55:06 | INFO     | Get frame - user 0004
+2025-12-08 12:55:06 | INFO     | Get video data - user 0004
+2025-12-08 12:55:06 | INFO     | Closing DB session
+2025-12-08 12:55:06 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 12:55:06 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 12:55:06 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 12:55:06 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 12:55:06 | INFO     | heart model predict - user : 0004
+2025-12-08 12:55:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 12:55:06 | INFO     | Opening database session
+2025-12-08 12:55:06 | INFO     | Begin DB transaction
+2025-12-08 12:55:06 | INFO     | Closing DB session
+2025-12-08 12:55:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 12:55:06 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-08 12:55:06 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 12:55:06 | WARNING  | Data is empty
+2025-12-08 12:55:06 | WARNING  | heart model error: no preprocess data
+2025-12-08 12:55:06 | INFO     | video model predict - user : 0004
+2025-12-08 12:55:06 | INFO     | Opening database session
+2025-12-08 12:55:06 | INFO     | Begin DB transaction
+2025-12-08 12:55:06 | INFO     | Get frame - user 0004
+2025-12-08 12:55:06 | INFO     | Get video data - user 0004
+2025-12-08 12:55:06 | INFO     | Closing DB session
+2025-12-08 12:55:06 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 12:55:06 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 12:55:06 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 12:55:06 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 12:55:06 | INFO     | ########predict result: 0.025, 0.0, 0.05, 0########
+2025-12-08 12:55:06 | INFO     | get predict status - prediction : 0.025
+2025-12-08 12:55:06 | INFO     | get predict status - status : 1
+2025-12-08 12:55:06 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.025, 'predict_heart': 0.0, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-08 12:55:06'}]
+2025-12-08 12:55:06 | INFO     | Closing DB session
+2025-12-08 13:04:24 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:04:27 | INFO     | Initializing database
+2025-12-08 13:04:27 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:04:27 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:06:45 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:06:49 | INFO     | Initializing database
+2025-12-08 13:06:49 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:06:49 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:07:09 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-08 13:07:09 | INFO     | mixed model predict - user : 0004
+2025-12-08 13:07:09 | INFO     | heart model predict - user : 0004
+2025-12-08 13:07:09 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 13:07:09 | INFO     | Opening database session
+2025-12-08 13:07:09 | INFO     | Begin DB transaction
+2025-12-08 13:07:09 | INFO     | Initializing Redis connection pool
+2025-12-08 13:07:09 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 13:07:09 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-08 13:07:09 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 13:07:09 | WARNING  | Data is empty
+2025-12-08 13:07:09 | WARNING  | heart model error: no preprocess data
+2025-12-08 13:07:09 | INFO     | video model predict - user : 0004
+2025-12-08 13:07:09 | INFO     | Opening database session
+2025-12-08 13:07:09 | INFO     | Begin DB transaction
+2025-12-08 13:07:09 | INFO     | Get frame - user 0004
+2025-12-08 13:07:09 | INFO     | Get video data - user 0004
+2025-12-08 13:07:09 | INFO     | Closing DB session
+2025-12-08 13:07:09 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 13:07:09 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 13:07:09 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 13:07:09 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 13:07:09 | INFO     | heart model predict - user : 0004
+2025-12-08 13:07:09 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 13:07:09 | INFO     | Opening database session
+2025-12-08 13:07:09 | INFO     | Begin DB transaction
+2025-12-08 13:07:09 | INFO     | Closing DB session
+2025-12-08 13:07:09 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 13:07:09 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-08 13:07:09 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 13:07:09 | WARNING  | Data is empty
+2025-12-08 13:07:09 | WARNING  | heart model error: no preprocess data
+2025-12-08 13:07:09 | INFO     | video model predict - user : 0004
+2025-12-08 13:07:09 | INFO     | Opening database session
+2025-12-08 13:07:09 | INFO     | Begin DB transaction
+2025-12-08 13:07:09 | INFO     | Get frame - user 0004
+2025-12-08 13:07:09 | INFO     | Get video data - user 0004
+2025-12-08 13:07:09 | INFO     | Closing DB session
+2025-12-08 13:07:09 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 13:07:09 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 13:07:09 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 13:07:09 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 13:07:09 | INFO     | ########predict result: 0.025, 0.0, 0.05, 0########
+2025-12-08 13:07:09 | INFO     | get predict status - prediction : 0.025
+2025-12-08 13:07:09 | INFO     | get predict status - status : 1
+2025-12-08 13:07:09 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.025, 'predict_heart': 0.0, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-08 13:07:09'}]
+2025-12-08 13:07:09 | INFO     | Closing DB session
+2025-12-08 13:09:58 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:10:02 | INFO     | Initializing database
+2025-12-08 13:10:02 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:10:02 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:10:05 | INFO     | Set parameters: 0001
+2025-12-08 13:10:35 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:10:39 | INFO     | Initializing database
+2025-12-08 13:10:39 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:10:39 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:10:42 | INFO     | Set parameters: 0001
+2025-12-08 13:10:42 | INFO     | Set parameters success: None, None, 20
+2025-12-08 13:11:48 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:11:52 | INFO     | Initializing database
+2025-12-08 13:11:52 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:11:52 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:11:54 | INFO     | Set parameters: 0001
+2025-12-08 13:11:54 | INFO     | Set parameters success: [0.1, 0.3, 0.5, 0.7, 0.9], [1, 1, 1], 20
+2025-12-08 13:13:40 | INFO     | System v1.0.0 Shutting down...

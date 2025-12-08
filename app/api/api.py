@@ -101,9 +101,13 @@ async def upload_bio_data(request: BioDataRequest) -> BioDataResponse:
 async def set_parameters(request: SetParamsRequest) -> GenericResponse:
     log.info(f"Set parameters: {request.user_id}")
     try:
-        settings.DEFAULT_THRESHOLDS = request.thresholds
-        settings.DEFAULT_MODELS = request.models
-        settings.DEFAULT_PREDICT_TIME_LENGTH = request.predict_time_length
+        if request.thresholds:
+            settings.DEFAULT_THRESHOLDS = request.thresholds
+        if request.models:
+            settings.DEFAULT_MODELS = request.models
+        if request.predict_time_length:
+            settings.DEFAULT_PREDICT_TIME_LENGTH = request.predict_time_length
+        log.info(f"Set parameters success: {settings.DEFAULT_THRESHOLDS}, {settings.DEFAULT_MODELS}, {settings.DEFAULT_PREDICT_TIME_LENGTH}")
         return GenericResponse()
     except Exception as e:
         log.error(f"Error when set parameters: {e}")
