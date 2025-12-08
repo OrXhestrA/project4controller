@@ -159,6 +159,11 @@ class PredictResultDto(BaseDto):
         description="预测结果状态",
         examples=["1", "2", "3", "4", "5", "6"]
     )
+    video_predict_stats: str = Field(
+        ...,
+        description="视频数据预测结果状态",
+        examples=[0, 1, 2]
+    )
 
     def to_dict(self, user_id: str):
         return {
@@ -167,5 +172,6 @@ class PredictResultDto(BaseDto):
             "predict_heart": self.predict_heart,
             "predict_video": self.predict_video,
             "predict_stats": self.predict_stats,
+            "video_predict_stats": self.video_predict_stats,
             "timestamp": self.timestamp
         }

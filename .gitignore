@@ -1,0 +1,7 @@
+tests
+logs
+data
+.pytest_cache
+classes.dot
+packages.dot
+pytest.ini

@@ -3,7 +3,7 @@ from typing import (
     Optional,
     Dict,
     Any,
-    List
+    List, Tuple
 )
 
 from app.model.video_predict import VideoFatiguePredictor
@@ -75,7 +75,7 @@ class ModelInterface:
             return None
 
     @staticmethod
-    async def predict_video(user_id: str) -> Optional[float]:
+    async def predict_video(user_id: str) -> Tuple[Optional[float], int]:
         """
         Video Model Predict Interface
         :param user_id:
@@ -89,17 +89,13 @@ class ModelInterface:
             predictor = VideoFatiguePredictor(model_path='app/weights/video_fatigue_model.pth')
 
             # 调用预测方法。注意：这里我们传入 None，让预测器返回模拟值进行测试
-            fatigue_probability = predictor.predict_fatigue(user_id, frames_data=frames)
-
-            if fatigue_probability is None:
-                log.error("video model error: prediction failed or data missing")
-                return None
+            fatigue_probability, fatigue_status = predictor.predict_fatigue(user_id, frames_data=frames)
 
             log.debug(f"video model result: {fatigue_probability}")
-            return fatigue_probability
+            return fatigue_probability, fatigue_status
         except Exception as e:
             log.error(f"video model error: {e}")
-            return None
+            return 0.0, 0
 
     @staticmethod
     async def get_predict_status(prediction: float) -> str:
@@ -130,18 +126,20 @@ class ModelInterface:
             mixed = 0.0
             heart = 0.0
             video = 0.0
+            fatigue_status = 0
             if settings.DEFAULT_MODELS[0]:
                 mixed = await ModelInterface.predict_mixed(user_id)
             if settings.DEFAULT_MODELS[1]:
                 heart = await ModelInterface.predict_heart(user_id)
             if settings.DEFAULT_MODELS[2]:
-                video = await ModelInterface.predict_video(user_id)
-            sum = (mixed + heart + video) / 3
+                video, fatigue_status = await ModelInterface.predict_video(user_id)
+
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
                 predict_video=video,
-                predict_stats=await ModelInterface.get_predict_status(prediction=sum),
+                predict_stats=await ModelInterface.get_predict_status(prediction=mixed),
+                fatigue_status=fatigue_status,
                 timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )
             results.append(result_dto.to_dict(user_id))

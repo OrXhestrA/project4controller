@@ -28,8 +28,8 @@ class Settings(BaseSettings):
         description="Default models for predict"
     )
 
-    DEFAULT_PREDICT_TIME_LENGTH: str = Field(
-        default="10min",
+    DEFAULT_PREDICT_TIME_LENGTH: int = Field(
+        default=30,
         env="DEFAULT_PREDICT_TIME_LENGTH",
         description="Default predict time length"
     )

@@ -19,7 +19,7 @@ from typing import (
     Any
 )
 from redis import Redis
-
+from app.config.base_config import settings
 
 class CacheAsideRepository:
     def __init__(self, db: AsyncSession, redis_client: Redis):
@@ -76,10 +76,11 @@ class CacheAsideRepository:
 
         log.info(f"Get heart data from db - user_id : {user_id}")
         query = select(HeartRateDataDB).where(
-            HeartRateDataDB.user_id == user_id
+            and_(HeartRateDataDB.user_id == user_id,
+                 HeartRateDataDB.timestamp >= datetime.now() - timedelta(minutes=settings.DEFAULT_PREDICT_TIME_LENGTH))
         ).order_by(
             desc(HeartRateDataDB.timestamp)
-        ).limit(limit)
+        )
 
         result = await self.db_session.execute(query)
         records = result.scalars().all()
@@ -201,7 +202,7 @@ class CacheAsideRepository:
         log.info(f"Get task data from db - user {user_id}")
         query = select(TaskDataDB).where(
             and_(TaskDataDB.user_id == user_id,
-                 TaskDataDB.timestamp >= datetime.now() - timedelta(minutes=30))
+                 TaskDataDB.timestamp >= datetime.now() - timedelta(minutes=settings.DEFAULT_PREDICT_TIME_LENGTH))
         ).order_by(
             desc(TaskDataDB.timestamp)
         )
@@ -255,7 +256,7 @@ class CacheAsideRepository:
         log.info(f"Get video data from db - user {user_id}")
         query = select(VideoDataDB).where(
             and_(VideoDataDB.user_id == user_id,
-                 VideoDataDB.timestamp >= datetime.now() - timedelta(minutes=30))
+                 VideoDataDB.timestamp >= datetime.now() - timedelta(minutes=settings.DEFAULT_PREDICT_TIME_LENGTH))
         ).order_by(
             desc(VideoDataDB.timestamp)
         )
@@ -311,7 +312,7 @@ class CacheAsideRepository:
         log.info(f"Get bio data from db - user {user_id}")
         query = select(BioDataDB).where(
             and_(BioDataDB.user_id == user_id,
-                 BioDataDB.timestamp >= datetime.now() - timedelta(minutes=30))
+                 BioDataDB.timestamp >= datetime.now() - timedelta(minutes=settings.DEFAULT_PREDICT_TIME_LENGTH))
         ).order_by(
             desc(BioDataDB.timestamp)
         )
