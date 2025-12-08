@@ -154,18 +154,24 @@ class PredictResultDto(BaseDto):
         le=1.0,
         description="视频数据预测结果"
     )
-    predict_stats: str = Field(
+    predict_stats: Optional[str] = Field(
         ...,
         description="预测结果状态",
         examples=["1", "2", "3", "4", "5", "6"]
     )
-    video_predict_stats: str = Field(
+    video_predict_stats: Optional[int] = Field(
         ...,
         description="视频数据预测结果状态",
         examples=[0, 1, 2]
     )
 
     def to_dict(self, user_id: str):
+        """
+        转换成字典
+        :param user_id:
+        :return:
+        """
+
         return {
             "user_id": user_id,
             "predict_mixed": self.predict_mixed,

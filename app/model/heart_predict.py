@@ -132,12 +132,12 @@ class HeartPredictor:
             data = np.array(data, dtype=np.float32)
 
             if len(data) == 0:
-                log.error("Data is empty")
+                log.warning("Data is empty")
                 return None
 
-            # if len(data) < self.required_min_points:
-            #     log.error(f"Data length is too short - required_min_points : {self.required_min_points}")
-            #     return None
+            if len(data) < self.required_min_points:
+                log.warning(f"Data length is too short - required_min_points : {self.required_min_points}")
+                return None
 
             valid_mask = (data >= 30) & (data <= 200)
             if not np.all(valid_mask):

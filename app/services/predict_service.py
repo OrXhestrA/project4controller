@@ -30,7 +30,7 @@ class ModelInterface:
         log.info(f"mixed model predict - user : {user_id}")
         try:
             predict_heart = await ModelInterface.predict_heart(user_id)
-            predict_video = await ModelInterface.predict_video(user_id)
+            predict_video, _ = await ModelInterface.predict_video(user_id)
             prediction = (predict_heart + predict_video) / 2
             log.debug(f"mixed model result: {prediction}")
             return prediction
@@ -49,20 +49,20 @@ class ModelInterface:
 
         try:
             if data is None:
-                log.error("heart model error: no heart data")
-                return None
+                log.warning("heart model error: no heart data")
+                return 0.0
 
             predictor = HeartPredictor('app/weights/best_temporal_heart_CNN.pth')
 
             if not predictor.model:
-                log.error("heart model error: no model")
-                return None
+                log.warning("heart model error: no model")
+                return 0.0
 
             input_tensor = predictor.preprocess_data(data, sampling_rate=1)
 
             if input_tensor is None:
-                log.error("heart model error: no preprocess data")
-                return None
+                log.warning("heart model error: no preprocess data")
+                return 0.0
 
             with torch.no_grad():
                 result = predictor.model(input_tensor)
@@ -72,10 +72,10 @@ class ModelInterface:
                 return float(fatigue_probability)
         except Exception as e:
             log.error(f"heart model error: {e}")
-            return None
+            return 0.0
 
     @staticmethod
-    async def predict_video(user_id: str) -> Tuple[Optional[float], int]:
+    async def predict_video(user_id: str):
         """
         Video Model Predict Interface
         :param user_id:
@@ -91,7 +91,6 @@ class ModelInterface:
             # 调用预测方法。注意：这里我们传入 None，让预测器返回模拟值进行测试
             fatigue_probability, fatigue_status = predictor.predict_fatigue(user_id, frames_data=frames)
 
-            log.debug(f"video model result: {fatigue_probability}")
             return fatigue_probability, fatigue_status
         except Exception as e:
             log.error(f"video model error: {e}")
@@ -133,13 +132,14 @@ class ModelInterface:
                 heart = await ModelInterface.predict_heart(user_id)
             if settings.DEFAULT_MODELS[2]:
                 video, fatigue_status = await ModelInterface.predict_video(user_id)
+            log.info(f"########predict result: {mixed}, {heart}, {video}, {fatigue_status}########")
 
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
                 predict_video=video,
                 predict_stats=await ModelInterface.get_predict_status(prediction=mixed),
-                fatigue_status=fatigue_status,
+                video_predict_stats=fatigue_status,
                 timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )
             results.append(result_dto.to_dict(user_id))
