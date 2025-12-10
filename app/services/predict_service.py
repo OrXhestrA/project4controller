@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime
 from typing import (
     Optional,
@@ -29,7 +30,7 @@ class ModelInterface:
         """
         log.info(f"mixed model predict - user : {user_id}")
         try:
-            predict_heart = await ModelInterface.predict_heart(user_id)
+            predict_heart, _ = await ModelInterface.predict_heart(user_id)
             predict_video, _ = await ModelInterface.predict_video(user_id)
             prediction = (predict_heart + predict_video) / 2
             log.debug(f"mixed model result: {prediction}")
@@ -38,9 +39,10 @@ class ModelInterface:
             log.error(f"mixed model error: {e}")
 
     @staticmethod
-    async def predict_heart(user_id: str) -> Optional[float]:
+    async def predict_heart(user_id: str):
         """
         Heart Model Predict Interface
+        :param data:
         :param user_id:
         :return:
         """
@@ -50,29 +52,49 @@ class ModelInterface:
         try:
             if data is None:
                 log.warning("heart model error: no heart data")
-                return 0.0
+                return 0.0, []
 
             predictor = HeartPredictor('app/weights/best_temporal_heart_CNN.pth')
-
+            # predictor = HeartPredictor('Z:\\2025\\code\\heartDemo\\app\\weights\\best_temporal_heart_CNN.pth')
             if not predictor.model:
                 log.warning("heart model error: no model")
-                return 0.0
+                return 0.0, []
 
-            input_tensor = predictor.preprocess_data(data, sampling_rate=1)
+            num_segment = int(len(data) / 30)
+            if num_segment < 1:
+                log.warning("heart model error: no enough data")
+                return 0.0, []
 
-            if input_tensor is None:
-                log.warning("heart model error: no preprocess data")
-                return 0.0
+            segments = HeartPredictor.segment_data(data,
+                                                   segment_length=150,
+                                                   num_segments=num_segment,
+                                                   fill_value=70
+                                                   )
+            weights = HeartPredictor.calculate_weights(num_segment, 'exponential')
+            results = []
+            final_result = 0
 
-            with torch.no_grad():
-                result = predictor.model(input_tensor)
-                probabilities = torch.softmax(result, dim=1)
-                fatigue_probability = probabilities[0, 1].item()
-                log.debug(f"heart model result: {fatigue_probability}")
-                return float(fatigue_probability)
+            for segment, weight in zip(segments, weights):
+                input_tensor = predictor.preprocess_data(segment, sampling_rate=1)
+
+                if input_tensor is None:
+                    log.warning("heart model error: no preprocess data")
+                    results.append(0.0)
+                log.info(f"segment: {segment}")
+                with torch.no_grad():
+                    result = predictor.model(input_tensor)
+                    probabilities = torch.softmax(result, dim=1)
+                    fatigue_probability = probabilities[0, 1].item()
+                    log.info(f"segment result: {fatigue_probability}")
+                    results.append(fatigue_probability)
+                    final_result += fatigue_probability * weight
+            results = [round(result, 3) for result in results]
+            final_result = round(final_result, 3)
+            log.info(f"heart model result: {final_result}")
+            return float(final_result), results
         except Exception as e:
             log.error(f"heart model error: {e}")
-            return 0.0
+            return 0.0, []
 
     @staticmethod
     async def predict_video(user_id: str):
@@ -125,18 +147,20 @@ class ModelInterface:
             mixed = 0.0
             heart = 0.0
             video = 0.0
+            heart_results = []
             fatigue_status = 0
             if settings.DEFAULT_MODELS[0]:
                 mixed = await ModelInterface.predict_mixed(user_id)
             if settings.DEFAULT_MODELS[1]:
-                heart = await ModelInterface.predict_heart(user_id)
+                heart, heart_results = await ModelInterface.predict_heart(user_id)
             if settings.DEFAULT_MODELS[2]:
                 video, fatigue_status = await ModelInterface.predict_video(user_id)
             log.info(f"########predict result: {mixed}, {heart}, {video}, {fatigue_status}########")
-
+            log.info(f"########predict results: {heart_results}")
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
+                predict_heart_list=heart_results,
                 predict_video=video,
                 predict_stats=await ModelInterface.get_predict_status(prediction=mixed),
                 video_predict_stats=fatigue_status,
@@ -144,3 +168,23 @@ class ModelInterface:
             )
             results.append(result_dto.to_dict(user_id))
         return results
+
+
+# async def example_usage():
+#     """使用示例"""
+#     # 模拟用户数据
+#     user_data = [50, 71, 50, 61, 65, 53, 52, 50, 67, 60] * 10  # 300个点
+#     log.info(f"user data: {len(user_data)}")
+#     # 进行预测
+#     final_result, results = await ModelInterface.predict_heart(user_id="", data=user_data)
+#
+#     if final_result is not None:
+#         print(f"最终结果: {final_result:.3f}")
+#         print(f"最终结果: {final_result}")
+#         print("结果:", results)
+#
+#
+# # 测试代码
+# if __name__ == "__main__":
+#     # 运行示例
+#     asyncio.run(example_usage())

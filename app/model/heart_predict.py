@@ -17,7 +17,7 @@ class HeartPredictor:
         self.model_path = model_path
         self.model = None
         self.seq_len = 9600
-        self.required_min_points = 300
+        self.required_min_points = 30
 
         self._load_model()
 
@@ -165,3 +165,54 @@ class HeartPredictor:
         except Exception as e:
             log.error(f"Preprocess data error - error : {e}")
             return None
+
+    @staticmethod
+    def segment_data(data, segment_length, num_segments, fill_value=70):
+        """
+
+        :param data:
+        :param total_points:
+        :param segment_length:
+        :param num_segments:
+        :param fill_value:
+        :return:
+        """
+        if len(data) < segment_length:
+            avg = np.sum(data) // len(data)
+            padding_length = segment_length - len(data) + num_segments
+            data = np.concatenate([np.full(padding_length, (fill_value + avg) // 2), data])
+
+        start_indices = np.linspace(0, len(data) - segment_length, num_segments, dtype=int)
+
+        segments = []
+        for start_index in start_indices:
+            segment = data[start_index:start_index + segment_length]
+            segments.append(segment)
+
+        return segments
+
+    @staticmethod
+    def calculate_weights(num_segments=30, weight_type='linear'):
+        """
+        计算每段数据的权重，越新的数据权重越大
+
+        参数:
+        num_segments: 段数
+        weight_type: 权重类型 ('linear', 'exponential')
+
+        返回:
+        weights: 归一化的权重数组，包含30个权重值，对应30个数据段， newer segments have higher weights
+        """
+        if weight_type == 'linear':
+            # 线性权重: 从1到num_segments
+            weights = np.arange(1, num_segments + 1)
+        elif weight_type == 'exponential':
+            # 指数权重: 2^i (i从0到num_segments-1)
+            weights = np.exp(np.arange(num_segments))
+        else:
+            raise ValueError("weight_type must be 'linear' or 'exponential'")
+
+            # 归一化权重使其总和为1
+        weights = weights / np.sum(weights)
+
+        return weights

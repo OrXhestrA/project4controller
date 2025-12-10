@@ -148,6 +148,10 @@ class PredictResultDto(BaseDto):
         le=1.0,
         description="心率数据预测结果"
     )
+    predict_heart_list: List[float] = Field(
+        None,
+        description="心率数据预测结果列表"
+    )
     predict_video: Optional[float] = Field(
         None,
         ge=0.0,
@@ -176,6 +180,7 @@ class PredictResultDto(BaseDto):
             "user_id": user_id,
             "predict_mixed": self.predict_mixed,
             "predict_heart": self.predict_heart,
+            "predict_heart_list": self.predict_heart_list,
             "predict_video": self.predict_video,
             "predict_stats": self.predict_stats,
             "video_predict_stats": self.video_predict_stats,
