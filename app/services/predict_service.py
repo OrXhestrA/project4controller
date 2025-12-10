@@ -14,7 +14,7 @@ from app.config.base_config import settings
 from app.models.dto import PredictResultDto
 import torch
 from app.model.heart_predict import HeartPredictor
-
+from app.config.base_config import settings
 
 class ModelInterface:
     """
@@ -22,17 +22,16 @@ class ModelInterface:
     """
 
     @staticmethod
-    async def predict_mixed(user_id: str) -> Optional[float]:
+    async def predict_mixed(predict_heart: float, predict_video: float) -> Optional[float]:
         """
         mixed model predict interface
-        :param data:
+        :param predict_heart:
+        :param predict_video:
         :return:
         """
-        log.info(f"mixed model predict - user : {user_id}")
         try:
-            predict_heart, _ = await ModelInterface.predict_heart(user_id)
-            predict_video, _ = await ModelInterface.predict_video(user_id)
-            prediction = (predict_heart + predict_video) / 2
+            prediction = (settings.DEFAULT_COEFFICIENT * predict_heart //
+                          + (1 - settings.DEFAULT_COEFFICIENT) * predict_video)
             log.debug(f"mixed model result: {prediction}")
             return prediction
         except Exception as e:
@@ -52,18 +51,18 @@ class ModelInterface:
         try:
             if data is None:
                 log.warning("heart model error: no heart data")
-                return 0.0, []
+                return [], 0.0
 
             predictor = HeartPredictor('app/weights/best_temporal_heart_CNN.pth')
             # predictor = HeartPredictor('Z:\\2025\\code\\heartDemo\\app\\weights\\best_temporal_heart_CNN.pth')
             if not predictor.model:
                 log.warning("heart model error: no model")
-                return 0.0, []
+                return [], 0.0
 
             num_segment = int(len(data) / 30)
             if num_segment < 1:
                 log.warning("heart model error: no enough data")
-                return 0.0, []
+                return [], 0.0
 
             segments = HeartPredictor.segment_data(data,
                                                    segment_length=150,
@@ -91,10 +90,10 @@ class ModelInterface:
             results = [round(result, 3) for result in results]
             final_result = round(final_result, 3)
             log.info(f"heart model result: {final_result}")
-            return float(final_result), results
+            return results, float(final_result)
         except Exception as e:
             log.error(f"heart model error: {e}")
-            return 0.0, []
+            return [], 0.0
 
     @staticmethod
     async def predict_video(user_id: str):
@@ -111,16 +110,17 @@ class ModelInterface:
             predictor = VideoFatiguePredictor(model_path='app/weights/video_fatigue_model.pth')
 
             # 调用预测方法。注意：这里我们传入 None，让预测器返回模拟值进行测试
-            fatigue_probability, fatigue_status = predictor.predict_fatigue(user_id, frames_data=frames)
+            results, final_result, final_status = predictor.predict_fatigue(user_id, frames_data=frames)
 
-            return fatigue_probability, fatigue_status
+            return results, float(final_result), final_status
         except Exception as e:
             log.error(f"video model error: {e}")
-            return 0.0, 0
+            return [], 0.0, 0
 
     @staticmethod
     async def get_predict_status(prediction: float) -> str:
         """
+        :param prediction:
         :param user_id:
         :return:
         """
@@ -148,22 +148,24 @@ class ModelInterface:
             heart = 0.0
             video = 0.0
             heart_results = []
-            fatigue_status = 0
-            if settings.DEFAULT_MODELS[0]:
-                mixed = await ModelInterface.predict_mixed(user_id)
+            video_results = []
+            video_status = 0
+
             if settings.DEFAULT_MODELS[1]:
-                heart, heart_results = await ModelInterface.predict_heart(user_id)
+                heart_results, heart = await ModelInterface.predict_heart(user_id)
             if settings.DEFAULT_MODELS[2]:
-                video, fatigue_status = await ModelInterface.predict_video(user_id)
-            log.info(f"########predict result: {mixed}, {heart}, {video}, {fatigue_status}########")
-            log.info(f"########predict results: {heart_results}")
+                video_results, video, video_status = await ModelInterface.predict_video(user_id)
+            if settings.DEFAULT_MODELS[0]:
+                mixed = await ModelInterface.predict_mixed(heart, video)
+
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
                 predict_heart_list=heart_results,
+                predict_video_list=video_results,
                 predict_video=video,
                 predict_stats=await ModelInterface.get_predict_status(prediction=mixed),
-                video_predict_stats=fatigue_status,
+                video_predict_stats=video_status,
                 timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )
             results.append(result_dto.to_dict(user_id))

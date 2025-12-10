@@ -170,9 +170,8 @@ class HeartPredictor:
     def segment_data(data, segment_length, num_segments, fill_value=70):
         """
 
-        :param data:
-        :param total_points:
-        :param segment_length:
+        :param data: 30
+        :param segment_length: 150
         :param num_segments:
         :param fill_value:
         :return:

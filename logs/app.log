@@ -3778,3 +3778,805 @@ video_predict_stats
 2025-12-08 13:11:54 | INFO     | Set parameters: 0001
 2025-12-08 13:11:54 | INFO     | Set parameters success: [0.1, 0.3, 0.5, 0.7, 0.9], [1, 1, 1], 20
 2025-12-08 13:13:40 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 13:13:44 | INFO     | Initializing database
+2025-12-08 13:13:44 | INFO     | System v1.0.0 Starting up...
+2025-12-08 13:13:44 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 13:16:07 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 15:58:37 | INFO     | Initializing database
+2025-12-08 15:58:37 | INFO     | System v1.0.0 Starting up...
+2025-12-08 15:58:37 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 16:00:59 | INFO     | Upload heart data: 0004
+2025-12-08 16:00:59 | INFO     | Upload heart data from user 0004
+2025-12-08 16:00:59 | INFO     | Opening database session
+2025-12-08 16:00:59 | INFO     | Begin DB transaction
+2025-12-08 16:00:59 | INFO     | Initializing Redis connection pool
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:00:59 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-08 16:00:59 | INFO     | Closing DB session
+2025-12-08 16:01:34 | INFO     | Upload heart data: 0004
+2025-12-08 16:01:34 | INFO     | Upload heart data from user 0004
+2025-12-08 16:01:34 | INFO     | Opening database session
+2025-12-08 16:01:34 | INFO     | Begin DB transaction
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:01:34 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-08 16:01:34 | INFO     | Closing DB session
+2025-12-08 16:02:11 | INFO     | Upload heart data: 0004
+2025-12-08 16:02:11 | INFO     | Upload heart data from user 0004
+2025-12-08 16:02:11 | INFO     | Opening database session
+2025-12-08 16:02:11 | INFO     | Begin DB transaction
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Insert heart data - user : 0004
+2025-12-08 16:02:11 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-08 16:02:11 | INFO     | Closing DB session
+2025-12-08 16:02:18 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-08 16:02:18 | INFO     | mixed model predict - user : 0004
+2025-12-08 16:02:18 | INFO     | heart model predict - user : 0004
+2025-12-08 16:02:18 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:02:18 | INFO     | Opening database session
+2025-12-08 16:02:18 | INFO     | Begin DB transaction
+2025-12-08 16:02:18 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:02:18 | INFO     | Get heart data success - user_id : 0004 - data : [80.0, 67.0, 60.0, 79.0, 68.0, 89.0, 50.0, 71.0, 69.0, 70.0, 80.0, 67.0, 60.0, 79.0, 68.0, 89.0, 50.0, 71.0, 69.0, 70.0, 80.0, 67.0, 60.0, 79.0, 68.0, 89.0, 50.0, 71.0, 69.0, 70.0]
+2025-12-08 16:02:18 | INFO     | Set cache - key : heart_rate:0004:latest
+2025-12-08 16:02:18 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:02:18 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:02:18 | INFO     | video model predict - user : 0004
+2025-12-08 16:02:18 | INFO     | Opening database session
+2025-12-08 16:02:18 | INFO     | Begin DB transaction
+2025-12-08 16:02:18 | INFO     | Get frame - user 0004
+2025-12-08 16:02:18 | INFO     | Get video data - user 0004
+2025-12-08 16:02:18 | INFO     | Closing DB session
+2025-12-08 16:02:18 | INFO     | Get video data from db - user 0004
+2025-12-08 16:02:18 | ERROR    | Failed to get frame: 'NoneType' object is not iterable
+2025-12-08 16:02:18 | ERROR    | mixed model error: 'NoneType' object is not iterable
+2025-12-08 16:02:18 | INFO     | heart model predict - user : 0004
+2025-12-08 16:02:18 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:02:18 | INFO     | Opening database session
+2025-12-08 16:02:18 | INFO     | Begin DB transaction
+2025-12-08 16:02:18 | INFO     | Closing DB session
+2025-12-08 16:02:18 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-08 16:02:18 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:02:18 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:02:18 | INFO     | video model predict - user : 0004
+2025-12-08 16:02:18 | INFO     | Opening database session
+2025-12-08 16:02:18 | INFO     | Begin DB transaction
+2025-12-08 16:02:18 | INFO     | Get frame - user 0004
+2025-12-08 16:02:18 | INFO     | Get video data - user 0004
+2025-12-08 16:02:18 | INFO     | Closing DB session
+2025-12-08 16:02:18 | INFO     | Get video data from db - user 0004
+2025-12-08 16:02:18 | ERROR    | Failed to get frame: 'NoneType' object is not iterable
+2025-12-08 16:02:18 | ERROR    | Error when predict by user ids: 'NoneType' object is not iterable
+2025-12-08 16:02:18 | INFO     | Closing DB session
+2025-12-08 16:02:56 | INFO     | Upload video data: 0004
+2025-12-08 16:02:56 | INFO     | Upload video data from user 0004
+2025-12-08 16:02:56 | INFO     | Opening database session
+2025-12-08 16:02:56 | INFO     | Begin DB transaction
+2025-12-08 16:02:56 | INFO     | start save frames, save mode : local
+2025-12-08 16:02:56 | INFO     | 保存帧到本地: data\videos
+2025-12-08 16:02:56 | INFO     | Delete cache - key : video_data:0004:latest - deleted : 0
+2025-12-08 16:02:56 | INFO     | Closing DB session
+2025-12-08 16:03:04 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-08 16:03:04 | INFO     | mixed model predict - user : 0004
+2025-12-08 16:03:04 | INFO     | heart model predict - user : 0004
+2025-12-08 16:03:04 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:03:04 | INFO     | Opening database session
+2025-12-08 16:03:04 | INFO     | Begin DB transaction
+2025-12-08 16:03:04 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-08 16:03:04 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:03:04 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:03:04 | INFO     | video model predict - user : 0004
+2025-12-08 16:03:04 | INFO     | Opening database session
+2025-12-08 16:03:04 | INFO     | Begin DB transaction
+2025-12-08 16:03:04 | INFO     | Get frame - user 0004
+2025-12-08 16:03:04 | INFO     | Get video data - user 0004
+2025-12-08 16:03:04 | INFO     | Closing DB session
+2025-12-08 16:03:04 | INFO     | Get video data from db - user 0004
+2025-12-08 16:03:04 | INFO     | Set cache - key : video_data:0004:latest
+2025-12-08 16:03:04 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 16:03:04 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 16:03:04 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 16:03:04 | INFO     | heart model predict - user : 0004
+2025-12-08 16:03:04 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:03:04 | INFO     | Opening database session
+2025-12-08 16:03:04 | INFO     | Begin DB transaction
+2025-12-08 16:03:04 | INFO     | Closing DB session
+2025-12-08 16:03:04 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-08 16:03:04 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:03:04 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:03:04 | INFO     | video model predict - user : 0004
+2025-12-08 16:03:04 | INFO     | Opening database session
+2025-12-08 16:03:04 | INFO     | Begin DB transaction
+2025-12-08 16:03:04 | INFO     | Get frame - user 0004
+2025-12-08 16:03:04 | INFO     | Get video data - user 0004
+2025-12-08 16:03:04 | INFO     | Closing DB session
+2025-12-08 16:03:04 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 16:03:04 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 16:03:04 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 16:03:04 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 16:03:04 | INFO     | ########predict result: 0.11993597596883773, 0.18987195193767548, 0.05, 0########
+2025-12-08 16:03:04 | INFO     | get predict status - prediction : 0.11993597596883773
+2025-12-08 16:03:04 | INFO     | get predict status - status : 2
+2025-12-08 16:03:04 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.11993597596883773, 'predict_heart': 0.18987195193767548, 'predict_video': 0.05, 'predict_stats': '2', 'video_predict_stats': 0, 'timestamp': '2025-12-08 16:03:04'}]
+2025-12-08 16:03:04 | INFO     | Closing DB session
+2025-12-08 16:04:24 | INFO     | System v1.0.0 Shutting down...
+2025-12-08 16:04:29 | INFO     | Initializing database
+2025-12-08 16:04:29 | INFO     | System v1.0.0 Starting up...
+2025-12-08 16:04:29 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-08 16:04:33 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-08 16:04:33 | INFO     | mixed model predict - user : 0004
+2025-12-08 16:04:33 | INFO     | heart model predict - user : 0004
+2025-12-08 16:04:33 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:04:33 | INFO     | Opening database session
+2025-12-08 16:04:33 | INFO     | Begin DB transaction
+2025-12-08 16:04:33 | INFO     | Initializing Redis connection pool
+2025-12-08 16:04:33 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-08 16:04:33 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:04:33 | INFO     | ########predict Heart Len: 30#########
+2025-12-08 16:04:33 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:04:33 | INFO     | video model predict - user : 0004
+2025-12-08 16:04:33 | INFO     | Opening database session
+2025-12-08 16:04:33 | INFO     | Begin DB transaction
+2025-12-08 16:04:33 | INFO     | Get frame - user 0004
+2025-12-08 16:04:33 | INFO     | Get video data - user 0004
+2025-12-08 16:04:33 | INFO     | Closing DB session
+2025-12-08 16:04:33 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 16:04:33 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 16:04:33 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 16:04:33 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 16:04:33 | INFO     | heart model predict - user : 0004
+2025-12-08 16:04:33 | INFO     | Get heart data from db - user_id : 0004
+2025-12-08 16:04:33 | INFO     | Opening database session
+2025-12-08 16:04:33 | INFO     | Begin DB transaction
+2025-12-08 16:04:33 | INFO     | Closing DB session
+2025-12-08 16:04:33 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-08 16:04:33 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-08 16:04:33 | INFO     | ########predict Heart Len: 30#########
+2025-12-08 16:04:33 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-08 16:04:33 | INFO     | video model predict - user : 0004
+2025-12-08 16:04:33 | INFO     | Opening database session
+2025-12-08 16:04:33 | INFO     | Begin DB transaction
+2025-12-08 16:04:33 | INFO     | Get frame - user 0004
+2025-12-08 16:04:33 | INFO     | Get video data - user 0004
+2025-12-08 16:04:33 | INFO     | Closing DB session
+2025-12-08 16:04:33 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-08 16:04:33 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-08 16:04:33 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-08 16:04:33 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-08 16:04:33 | INFO     | ########predict result: 0.11993597596883773, 0.18987195193767548, 0.05, 0########
+2025-12-08 16:04:33 | INFO     | get predict status - prediction : 0.11993597596883773
+2025-12-08 16:04:33 | INFO     | get predict status - status : 2
+2025-12-08 16:04:33 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.11993597596883773, 'predict_heart': 0.18987195193767548, 'predict_video': 0.05, 'predict_stats': '2', 'video_predict_stats': 0, 'timestamp': '2025-12-08 16:04:33'}]
+2025-12-08 16:04:33 | INFO     | Closing DB session
+2025-12-08 16:04:54 | INFO     | System v1.0.0 Shutting down...
+2025-12-09 14:14:21 | INFO     | Initializing database
+2025-12-09 14:14:21 | INFO     | System v1.0.0 Starting up...
+2025-12-09 14:14:21 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-09 14:14:35 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-09 14:14:35 | INFO     | mixed model predict - user : 0004
+2025-12-09 14:14:35 | INFO     | heart model predict - user : 0004
+2025-12-09 14:14:35 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:14:35 | INFO     | Opening database session
+2025-12-09 14:14:35 | INFO     | Begin DB transaction
+2025-12-09 14:14:35 | INFO     | Initializing Redis connection pool
+2025-12-09 14:14:35 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:14:35 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-09 14:14:35 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-09 14:14:35 | WARNING  | Data is empty
+2025-12-09 14:14:35 | WARNING  | heart model error: no preprocess data
+2025-12-09 14:14:35 | INFO     | video model predict - user : 0004
+2025-12-09 14:14:35 | INFO     | Opening database session
+2025-12-09 14:14:35 | INFO     | Begin DB transaction
+2025-12-09 14:14:35 | INFO     | Get frame - user 0004
+2025-12-09 14:14:35 | INFO     | Get video data - user 0004
+2025-12-09 14:14:35 | INFO     | Closing DB session
+2025-12-09 14:14:35 | INFO     | Get video data from db - user 0004
+2025-12-09 14:14:35 | ERROR    | Failed to get frame: 'NoneType' object is not iterable
+2025-12-09 14:14:35 | ERROR    | mixed model error: 'NoneType' object is not iterable
+2025-12-09 14:14:35 | INFO     | heart model predict - user : 0004
+2025-12-09 14:14:35 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:14:35 | INFO     | Opening database session
+2025-12-09 14:14:35 | INFO     | Begin DB transaction
+2025-12-09 14:14:35 | INFO     | Closing DB session
+2025-12-09 14:14:35 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:14:35 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-09 14:14:35 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-09 14:14:35 | WARNING  | Data is empty
+2025-12-09 14:14:35 | WARNING  | heart model error: no preprocess data
+2025-12-09 14:14:35 | INFO     | video model predict - user : 0004
+2025-12-09 14:14:35 | INFO     | Opening database session
+2025-12-09 14:14:35 | INFO     | Begin DB transaction
+2025-12-09 14:14:35 | INFO     | Get frame - user 0004
+2025-12-09 14:14:35 | INFO     | Get video data - user 0004
+2025-12-09 14:14:35 | INFO     | Closing DB session
+2025-12-09 14:14:35 | INFO     | Get video data from db - user 0004
+2025-12-09 14:14:35 | ERROR    | Failed to get frame: 'NoneType' object is not iterable
+2025-12-09 14:14:35 | ERROR    | Error when predict by user ids: 'NoneType' object is not iterable
+2025-12-09 14:14:35 | INFO     | Closing DB session
+2025-12-09 14:16:18 | INFO     | Upload video data: 0004
+2025-12-09 14:16:18 | INFO     | Upload video data from user 0004
+2025-12-09 14:16:18 | INFO     | Opening database session
+2025-12-09 14:16:18 | INFO     | Begin DB transaction
+2025-12-09 14:16:18 | INFO     | start save frames, save mode : local
+2025-12-09 14:16:18 | INFO     | 保存帧到本地: data\videos
+2025-12-09 14:16:18 | INFO     | Delete cache - key : video_data:0004:latest - deleted : 0
+2025-12-09 14:16:18 | INFO     | Closing DB session
+2025-12-09 14:16:24 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-09 14:16:24 | INFO     | mixed model predict - user : 0004
+2025-12-09 14:16:24 | INFO     | heart model predict - user : 0004
+2025-12-09 14:16:24 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:16:24 | INFO     | Opening database session
+2025-12-09 14:16:24 | INFO     | Begin DB transaction
+2025-12-09 14:16:24 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:16:24 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-09 14:16:24 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-09 14:16:24 | WARNING  | Data is empty
+2025-12-09 14:16:24 | WARNING  | heart model error: no preprocess data
+2025-12-09 14:16:24 | INFO     | video model predict - user : 0004
+2025-12-09 14:16:24 | INFO     | Opening database session
+2025-12-09 14:16:24 | INFO     | Begin DB transaction
+2025-12-09 14:16:24 | INFO     | Get frame - user 0004
+2025-12-09 14:16:24 | INFO     | Get video data - user 0004
+2025-12-09 14:16:24 | INFO     | Closing DB session
+2025-12-09 14:16:24 | INFO     | Get video data from db - user 0004
+2025-12-09 14:16:24 | INFO     | Set cache - key : video_data:0004:latest
+2025-12-09 14:16:24 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-09 14:16:24 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-09 14:16:24 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-09 14:16:24 | INFO     | heart model predict - user : 0004
+2025-12-09 14:16:24 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:16:24 | INFO     | Opening database session
+2025-12-09 14:16:24 | INFO     | Begin DB transaction
+2025-12-09 14:16:24 | INFO     | Closing DB session
+2025-12-09 14:16:24 | INFO     | Get heart data from db - user_id : 0004
+2025-12-09 14:16:24 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-09 14:16:24 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-09 14:16:24 | WARNING  | Data is empty
+2025-12-09 14:16:24 | WARNING  | heart model error: no preprocess data
+2025-12-09 14:16:24 | INFO     | video model predict - user : 0004
+2025-12-09 14:16:24 | INFO     | Opening database session
+2025-12-09 14:16:24 | INFO     | Begin DB transaction
+2025-12-09 14:16:24 | INFO     | Get frame - user 0004
+2025-12-09 14:16:24 | INFO     | Get video data - user 0004
+2025-12-09 14:16:24 | INFO     | Closing DB session
+2025-12-09 14:16:24 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-09 14:16:24 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-09 14:16:24 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-09 14:16:24 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-09 14:16:24 | INFO     | ########predict result: 0.025, 0.0, 0.05, 0########
+2025-12-09 14:16:24 | INFO     | get predict status - prediction : 0.025
+2025-12-09 14:16:24 | INFO     | get predict status - status : 1
+2025-12-09 14:16:24 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.025, 'predict_heart': 0.0, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-09 14:16:24'}]
+2025-12-09 14:16:24 | INFO     | Closing DB session
+2025-12-09 14:17:45 | INFO     | System v1.0.0 Shutting down...
+2025-12-10 13:50:17 | INFO     | Initializing database
+2025-12-10 13:51:07 | INFO     | Initializing database
+2025-12-10 13:51:07 | INFO     | System v1.0.0 Starting up...
+2025-12-10 13:51:07 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-10 13:51:31 | INFO     | Upload video data: 0004
+2025-12-10 13:51:31 | INFO     | Upload video data from user 0004
+2025-12-10 13:51:31 | INFO     | Opening database session
+2025-12-10 13:51:31 | INFO     | Begin DB transaction
+2025-12-10 13:51:31 | INFO     | Initializing Redis connection pool
+2025-12-10 13:51:31 | INFO     | start save frames, save mode : local
+2025-12-10 13:51:31 | INFO     | 保存帧到本地: data\videos
+2025-12-10 13:51:31 | INFO     | Delete cache - key : video_data:0004:latest - deleted : 0
+2025-12-10 13:51:31 | INFO     | Closing DB session
+2025-12-10 13:52:41 | INFO     | Upload heart data: 0004
+2025-12-10 13:52:41 | INFO     | Upload heart data from user 0004
+2025-12-10 13:52:41 | INFO     | Opening database session
+2025-12-10 13:52:41 | INFO     | Begin DB transaction
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:41 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 13:52:41 | INFO     | Closing DB session
+2025-12-10 13:52:43 | INFO     | Upload heart data: 0004
+2025-12-10 13:52:43 | INFO     | Upload heart data from user 0004
+2025-12-10 13:52:43 | INFO     | Opening database session
+2025-12-10 13:52:43 | INFO     | Begin DB transaction
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:52:43 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 13:52:43 | INFO     | Closing DB session
+2025-12-10 13:52:55 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 13:52:55 | INFO     | mixed model predict - user : 0004
+2025-12-10 13:52:55 | INFO     | heart model predict - user : 0004
+2025-12-10 13:52:55 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:52:55 | INFO     | Opening database session
+2025-12-10 13:52:55 | INFO     | Begin DB transaction
+2025-12-10 13:52:55 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:52:55 | INFO     | Get heart data success - user_id : 0004 - data : [80.0, 80.0, 67.0, 67.0, 60.0, 60.0, 79.0, 79.0, 68.0, 68.0, 89.0, 89.0, 50.0, 50.0, 71.0, 71.0, 69.0, 69.0, 70.0, 70.0]
+2025-12-10 13:52:55 | INFO     | Set cache - key : heart_rate:0004:latest
+2025-12-10 13:52:55 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:52:55 | WARNING  | heart model error: no enough data
+2025-12-10 13:52:55 | INFO     | video model predict - user : 0004
+2025-12-10 13:52:55 | INFO     | Opening database session
+2025-12-10 13:52:55 | INFO     | Begin DB transaction
+2025-12-10 13:52:55 | INFO     | Get frame - user 0004
+2025-12-10 13:52:55 | INFO     | Get video data - user 0004
+2025-12-10 13:52:55 | INFO     | Closing DB session
+2025-12-10 13:52:55 | INFO     | Get video data from db - user 0004
+2025-12-10 13:52:55 | INFO     | Set cache - key : video_data:0004:latest
+2025-12-10 13:52:55 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:52:55 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:52:55 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:52:55 | ERROR    | mixed model error: can only concatenate tuple (not "float") to tuple
+2025-12-10 13:52:55 | INFO     | heart model predict - user : 0004
+2025-12-10 13:52:55 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:52:55 | INFO     | Opening database session
+2025-12-10 13:52:55 | INFO     | Begin DB transaction
+2025-12-10 13:52:55 | INFO     | Closing DB session
+2025-12-10 13:52:55 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:52:55 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:52:55 | WARNING  | heart model error: no enough data
+2025-12-10 13:52:55 | INFO     | video model predict - user : 0004
+2025-12-10 13:52:55 | INFO     | Opening database session
+2025-12-10 13:52:55 | INFO     | Begin DB transaction
+2025-12-10 13:52:55 | INFO     | Get frame - user 0004
+2025-12-10 13:52:55 | INFO     | Get video data - user 0004
+2025-12-10 13:52:55 | INFO     | Closing DB session
+2025-12-10 13:52:55 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:52:55 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:52:55 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:52:55 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:52:55 | INFO     | ########predict result: None, 0.0, 0.05, 0########
+2025-12-10 13:52:55 | INFO     | get predict status - prediction : None
+2025-12-10 13:52:55 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': None, 'predict_heart': 0.0, 'predict_video': 0.05, 'predict_stats': '0', 'video_predict_stats': 0, 'timestamp': '2025-12-10 13:52:55'}]
+2025-12-10 13:52:55 | INFO     | Closing DB session
+2025-12-10 13:53:27 | INFO     | Upload heart data: 0004
+2025-12-10 13:53:27 | INFO     | Upload heart data from user 0004
+2025-12-10 13:53:27 | INFO     | Opening database session
+2025-12-10 13:53:27 | INFO     | Begin DB transaction
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Insert heart data - user : 0004
+2025-12-10 13:53:27 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 13:53:27 | INFO     | Closing DB session
+2025-12-10 13:53:34 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 13:53:34 | INFO     | mixed model predict - user : 0004
+2025-12-10 13:53:34 | INFO     | heart model predict - user : 0004
+2025-12-10 13:53:34 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:53:34 | INFO     | Opening database session
+2025-12-10 13:53:34 | INFO     | Begin DB transaction
+2025-12-10 13:53:34 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:53:34 | INFO     | Get heart data success - user_id : 0004 - data : [80.0, 80.0, 80.0, 67.0, 67.0, 67.0, 60.0, 60.0, 60.0, 79.0, 79.0, 79.0, 68.0, 68.0, 68.0, 89.0, 89.0, 89.0, 50.0, 50.0, 50.0, 71.0, 71.0, 71.0, 69.0, 69.0, 69.0, 70.0, 70.0, 70.0]
+2025-12-10 13:53:34 | INFO     | Set cache - key : heart_rate:0004:latest
+2025-12-10 13:53:34 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:53:34 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:53:34 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:53:34 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:53:34 | INFO     | heart model result: 0.033
+2025-12-10 13:53:34 | INFO     | video model predict - user : 0004
+2025-12-10 13:53:34 | INFO     | Opening database session
+2025-12-10 13:53:34 | INFO     | Begin DB transaction
+2025-12-10 13:53:34 | INFO     | Get frame - user 0004
+2025-12-10 13:53:34 | INFO     | Get video data - user 0004
+2025-12-10 13:53:34 | INFO     | Closing DB session
+2025-12-10 13:53:34 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:53:34 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:53:34 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:53:34 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:53:34 | ERROR    | mixed model error: can only concatenate tuple (not "float") to tuple
+2025-12-10 13:53:34 | INFO     | heart model predict - user : 0004
+2025-12-10 13:53:34 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:53:34 | INFO     | Opening database session
+2025-12-10 13:53:34 | INFO     | Begin DB transaction
+2025-12-10 13:53:34 | INFO     | Closing DB session
+2025-12-10 13:53:34 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:53:34 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:53:34 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:53:34 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:53:34 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:53:34 | INFO     | heart model result: 0.033
+2025-12-10 13:53:34 | INFO     | video model predict - user : 0004
+2025-12-10 13:53:34 | INFO     | Opening database session
+2025-12-10 13:53:34 | INFO     | Begin DB transaction
+2025-12-10 13:53:34 | INFO     | Get frame - user 0004
+2025-12-10 13:53:34 | INFO     | Get video data - user 0004
+2025-12-10 13:53:34 | INFO     | Closing DB session
+2025-12-10 13:53:34 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:53:34 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:53:34 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:53:34 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:53:34 | INFO     | ########predict result: None, 0.033, 0.05, 0########
+2025-12-10 13:53:34 | INFO     | get predict status - prediction : None
+2025-12-10 13:53:34 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': None, 'predict_heart': 0.033, 'predict_video': 0.05, 'predict_stats': '0', 'video_predict_stats': 0, 'timestamp': '2025-12-10 13:53:34'}]
+2025-12-10 13:53:34 | INFO     | Closing DB session
+2025-12-10 13:55:42 | INFO     | System v1.0.0 Shutting down...
+2025-12-10 13:55:45 | INFO     | Initializing database
+2025-12-10 13:55:45 | INFO     | System v1.0.0 Starting up...
+2025-12-10 13:55:45 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-10 13:55:53 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 13:55:53 | INFO     | mixed model predict - user : 0004
+2025-12-10 13:55:53 | INFO     | heart model predict - user : 0004
+2025-12-10 13:55:53 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:55:53 | INFO     | Opening database session
+2025-12-10 13:55:53 | INFO     | Begin DB transaction
+2025-12-10 13:55:53 | INFO     | Initializing Redis connection pool
+2025-12-10 13:55:53 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:55:53 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:55:53 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:55:53 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:55:53 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:55:53 | INFO     | heart model result: 0.033
+2025-12-10 13:55:53 | INFO     | video model predict - user : 0004
+2025-12-10 13:55:53 | INFO     | Opening database session
+2025-12-10 13:55:53 | INFO     | Begin DB transaction
+2025-12-10 13:55:53 | INFO     | Get frame - user 0004
+2025-12-10 13:55:53 | INFO     | Get video data - user 0004
+2025-12-10 13:55:53 | INFO     | Closing DB session
+2025-12-10 13:55:53 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:55:53 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:55:53 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:55:53 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:55:53 | INFO     | heart model predict - user : 0004
+2025-12-10 13:55:53 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:55:53 | INFO     | Opening database session
+2025-12-10 13:55:53 | INFO     | Begin DB transaction
+2025-12-10 13:55:53 | INFO     | Closing DB session
+2025-12-10 13:55:53 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:55:53 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:55:53 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:55:53 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:55:53 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:55:53 | INFO     | heart model result: 0.033
+2025-12-10 13:55:53 | INFO     | video model predict - user : 0004
+2025-12-10 13:55:53 | INFO     | Opening database session
+2025-12-10 13:55:53 | INFO     | Begin DB transaction
+2025-12-10 13:55:53 | INFO     | Get frame - user 0004
+2025-12-10 13:55:53 | INFO     | Get video data - user 0004
+2025-12-10 13:55:53 | INFO     | Closing DB session
+2025-12-10 13:55:53 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:55:53 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:55:53 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:55:53 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:55:53 | INFO     | ########predict result: 0.0415, 0.033, 0.05, 0########
+2025-12-10 13:55:53 | INFO     | get predict status - prediction : 0.0415
+2025-12-10 13:55:53 | INFO     | get predict status - status : 1
+2025-12-10 13:55:53 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.0415, 'predict_heart': 0.033, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-10 13:55:53'}]
+2025-12-10 13:55:53 | INFO     | Closing DB session
+2025-12-10 13:57:27 | INFO     | System v1.0.0 Shutting down...
+2025-12-10 13:57:31 | INFO     | Initializing database
+2025-12-10 13:57:31 | INFO     | System v1.0.0 Starting up...
+2025-12-10 13:57:31 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-10 13:57:36 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 13:57:36 | INFO     | mixed model predict - user : 0004
+2025-12-10 13:57:36 | INFO     | heart model predict - user : 0004
+2025-12-10 13:57:36 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:57:36 | INFO     | Opening database session
+2025-12-10 13:57:36 | INFO     | Begin DB transaction
+2025-12-10 13:57:36 | INFO     | Initializing Redis connection pool
+2025-12-10 13:57:36 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:57:36 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:57:36 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:57:36 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:57:36 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:57:36 | INFO     | heart model result: 0.033
+2025-12-10 13:57:36 | INFO     | video model predict - user : 0004
+2025-12-10 13:57:36 | INFO     | Opening database session
+2025-12-10 13:57:36 | INFO     | Begin DB transaction
+2025-12-10 13:57:36 | INFO     | Get frame - user 0004
+2025-12-10 13:57:36 | INFO     | Get video data - user 0004
+2025-12-10 13:57:36 | INFO     | Closing DB session
+2025-12-10 13:57:36 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:57:36 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:57:36 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:57:36 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:57:36 | INFO     | heart model predict - user : 0004
+2025-12-10 13:57:36 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 13:57:36 | INFO     | Opening database session
+2025-12-10 13:57:36 | INFO     | Begin DB transaction
+2025-12-10 13:57:36 | INFO     | Closing DB session
+2025-12-10 13:57:36 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 13:57:36 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 13:57:36 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 13:57:36 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 13:57:36 | INFO     | segment result: 0.03315012529492378
+2025-12-10 13:57:36 | INFO     | heart model result: 0.033
+2025-12-10 13:57:36 | INFO     | video model predict - user : 0004
+2025-12-10 13:57:36 | INFO     | Opening database session
+2025-12-10 13:57:36 | INFO     | Begin DB transaction
+2025-12-10 13:57:36 | INFO     | Get frame - user 0004
+2025-12-10 13:57:36 | INFO     | Get video data - user 0004
+2025-12-10 13:57:36 | INFO     | Closing DB session
+2025-12-10 13:57:36 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 13:57:36 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 13:57:36 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 13:57:36 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 13:57:36 | INFO     | ########predict result: 0.0415, 0.033, 0.05, 0########
+2025-12-10 13:57:36 | INFO     | ########predict results: [0.033]
+2025-12-10 13:57:36 | INFO     | get predict status - prediction : 0.0415
+2025-12-10 13:57:36 | INFO     | get predict status - status : 1
+2025-12-10 13:57:36 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.0415, 'predict_heart': 0.033, 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-10 13:57:36'}]
+2025-12-10 13:57:36 | INFO     | Closing DB session
+2025-12-10 14:01:00 | INFO     | System v1.0.0 Shutting down...
+2025-12-10 14:01:04 | INFO     | Initializing database
+2025-12-10 14:01:04 | INFO     | System v1.0.0 Starting up...
+2025-12-10 14:01:04 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-10 14:01:06 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 14:01:06 | INFO     | mixed model predict - user : 0004
+2025-12-10 14:01:06 | INFO     | heart model predict - user : 0004
+2025-12-10 14:01:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 14:01:06 | INFO     | Opening database session
+2025-12-10 14:01:06 | INFO     | Begin DB transaction
+2025-12-10 14:01:06 | INFO     | Initializing Redis connection pool
+2025-12-10 14:01:06 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 14:01:06 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 14:01:06 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 14:01:06 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 14:01:06 | INFO     | segment result: 0.03315012529492378
+2025-12-10 14:01:06 | INFO     | heart model result: 0.033
+2025-12-10 14:01:06 | INFO     | video model predict - user : 0004
+2025-12-10 14:01:06 | INFO     | Opening database session
+2025-12-10 14:01:06 | INFO     | Begin DB transaction
+2025-12-10 14:01:06 | INFO     | Get frame - user 0004
+2025-12-10 14:01:06 | INFO     | Get video data - user 0004
+2025-12-10 14:01:06 | INFO     | Closing DB session
+2025-12-10 14:01:06 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 14:01:06 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 14:01:06 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 14:01:06 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 14:01:06 | INFO     | heart model predict - user : 0004
+2025-12-10 14:01:06 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 14:01:06 | INFO     | Opening database session
+2025-12-10 14:01:06 | INFO     | Begin DB transaction
+2025-12-10 14:01:06 | INFO     | Closing DB session
+2025-12-10 14:01:06 | INFO     | Get cache - key : heart_rate:0004:latest
+2025-12-10 14:01:06 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 14:01:06 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 14:01:06 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 14:01:06 | INFO     | segment result: 0.03315012529492378
+2025-12-10 14:01:06 | INFO     | heart model result: 0.033
+2025-12-10 14:01:06 | INFO     | video model predict - user : 0004
+2025-12-10 14:01:06 | INFO     | Opening database session
+2025-12-10 14:01:06 | INFO     | Begin DB transaction
+2025-12-10 14:01:06 | INFO     | Get frame - user 0004
+2025-12-10 14:01:06 | INFO     | Get video data - user 0004
+2025-12-10 14:01:06 | INFO     | Closing DB session
+2025-12-10 14:01:06 | INFO     | Get cache - key : video_data:0004:latest
+2025-12-10 14:01:06 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 14:01:06 | INFO     | PERCLOS: 0.00 | MinEnergy: 95.0
+2025-12-10 14:01:06 | INFO     | Video Predict >> Level: 0, Score: 0.05
+2025-12-10 14:01:06 | INFO     | ########predict result: 0.0415, 0.033, 0.05, 0########
+2025-12-10 14:01:06 | INFO     | ########predict results: [0.033]
+2025-12-10 14:01:06 | INFO     | get predict status - prediction : 0.0415
+2025-12-10 14:01:06 | INFO     | get predict status - status : 1
+2025-12-10 14:01:06 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.0415, 'predict_heart': 0.033, 'predict_heart_list': [0.033], 'predict_video': 0.05, 'predict_stats': '1', 'video_predict_stats': 0, 'timestamp': '2025-12-10 14:01:06'}]
+2025-12-10 14:01:06 | INFO     | Closing DB session
+2025-12-10 14:14:27 | INFO     | System v1.0.0 Shutting down...
+2025-12-10 15:53:50 | INFO     | Initializing database
+2025-12-10 15:53:50 | INFO     | System v1.0.0 Starting up...
+2025-12-10 15:53:50 | INFO     | website: http://0.0.0.0:8000/docs
+2025-12-10 15:53:56 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 15:53:56 | INFO     | heart model predict - user : 0004
+2025-12-10 15:53:56 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 15:53:56 | INFO     | Opening database session
+2025-12-10 15:53:56 | INFO     | Begin DB transaction
+2025-12-10 15:53:56 | INFO     | Initializing Redis connection pool
+2025-12-10 15:53:56 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 15:53:56 | INFO     | Get heart data success - user_id : 0004 - data : []
+2025-12-10 15:53:56 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 15:53:56 | WARNING  | heart model error: no enough data
+2025-12-10 15:53:56 | INFO     | video model predict - user : 0004
+2025-12-10 15:53:56 | INFO     | Opening database session
+2025-12-10 15:53:56 | INFO     | Begin DB transaction
+2025-12-10 15:53:56 | INFO     | Get frame - user 0004
+2025-12-10 15:53:56 | INFO     | Get video data - user 0004
+2025-12-10 15:53:56 | INFO     | Closing DB session
+2025-12-10 15:53:56 | INFO     | Get video data from db - user 0004
+2025-12-10 15:53:56 | ERROR    | Failed to get frame: 'NoneType' object is not iterable
+2025-12-10 15:53:56 | ERROR    | Error when predict by user ids: 'NoneType' object is not iterable
+2025-12-10 15:53:56 | INFO     | Closing DB session
+2025-12-10 15:55:10 | INFO     | Upload video data: 0004
+2025-12-10 15:55:10 | INFO     | Upload video data from user 0004
+2025-12-10 15:55:10 | INFO     | Opening database session
+2025-12-10 15:55:10 | INFO     | Begin DB transaction
+2025-12-10 15:55:10 | INFO     | start save frames, save mode : local
+2025-12-10 15:55:10 | INFO     | 保存帧到本地: data\videos
+2025-12-10 15:55:10 | INFO     | Delete cache - key : video_data:0004:latest - deleted : 0
+2025-12-10 15:55:10 | INFO     | Closing DB session
+2025-12-10 15:56:16 | INFO     | Upload heart data: 0004
+2025-12-10 15:56:16 | INFO     | Upload heart data from user 0004
+2025-12-10 15:56:16 | INFO     | Opening database session
+2025-12-10 15:56:16 | INFO     | Begin DB transaction
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:16 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 15:56:16 | INFO     | Closing DB session
+2025-12-10 15:56:17 | INFO     | Upload heart data: 0004
+2025-12-10 15:56:17 | INFO     | Upload heart data from user 0004
+2025-12-10 15:56:17 | INFO     | Opening database session
+2025-12-10 15:56:17 | INFO     | Begin DB transaction
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:17 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 15:56:17 | INFO     | Closing DB session
+2025-12-10 15:56:18 | INFO     | Upload heart data: 0004
+2025-12-10 15:56:18 | INFO     | Upload heart data from user 0004
+2025-12-10 15:56:18 | INFO     | Opening database session
+2025-12-10 15:56:18 | INFO     | Begin DB transaction
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Insert heart data - user : 0004
+2025-12-10 15:56:18 | INFO     | Delete cache - key : heart_rate:0004:latest
+2025-12-10 15:56:18 | INFO     | Closing DB session
+2025-12-10 15:56:27 | INFO     | Predict by user ids: ['0004'], task_id : task_0003
+2025-12-10 15:56:27 | INFO     | heart model predict - user : 0004
+2025-12-10 15:56:27 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 15:56:27 | INFO     | Opening database session
+2025-12-10 15:56:27 | INFO     | Begin DB transaction
+2025-12-10 15:56:27 | INFO     | Get heart data from db - user_id : 0004
+2025-12-10 15:56:27 | INFO     | Get heart data success - user_id : 0004 - data : [80.0, 80.0, 80.0, 67.0, 67.0, 67.0, 60.0, 60.0, 60.0, 79.0, 79.0, 79.0, 68.0, 68.0, 68.0, 89.0, 89.0, 89.0, 50.0, 50.0, 50.0, 71.0, 71.0, 71.0, 69.0, 69.0, 69.0, 70.0, 70.0, 70.0]
+2025-12-10 15:56:27 | INFO     | Set cache - key : heart_rate:0004:latest
+2025-12-10 15:56:27 | INFO     | Load model success - path : app/weights/best_temporal_heart_CNN.pth
+2025-12-10 15:56:27 | INFO     | Resample data success - original_rate : 1 - target_rate : 32
+2025-12-10 15:56:27 | INFO     | segment: [70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70.
+ 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 70. 80. 80. 80. 67. 67.
+ 67. 60. 60. 60. 79. 79. 79. 68. 68. 68. 89. 89. 89. 50. 50. 50. 71. 71.
+ 71. 69. 69. 69. 70. 70.]
+2025-12-10 15:56:27 | INFO     | segment result: 0.03315012529492378
+2025-12-10 15:56:27 | INFO     | heart model result: 0.033
+2025-12-10 15:56:27 | INFO     | video model predict - user : 0004
+2025-12-10 15:56:27 | INFO     | Opening database session
+2025-12-10 15:56:27 | INFO     | Begin DB transaction
+2025-12-10 15:56:27 | INFO     | Get frame - user 0004
+2025-12-10 15:56:27 | INFO     | Get video data - user 0004
+2025-12-10 15:56:27 | INFO     | Closing DB session
+2025-12-10 15:56:27 | INFO     | Get video data from db - user 0004
+2025-12-10 15:56:27 | INFO     | Set cache - key : video_data:0004:latest
+2025-12-10 15:56:27 | INFO     | Video model logic (MediaPipe) initialized.
+2025-12-10 15:56:27 | INFO     | PERCLOS/Energy Analysis Done. Overall Score: 0.05, Level: 0
+2025-12-10 15:56:27 | WARNING  | User 0004: 不满一分钟数据(1帧)，无法分组预测。
+2025-12-10 15:56:27 | INFO     | get predict status - prediction : 0.0
+2025-12-10 15:56:27 | INFO     | get predict status - status : 1
+2025-12-10 15:56:27 | INFO     | Predict result: [{'user_id': '0004', 'predict_mixed': 0.0, 'predict_heart_list': [0.033], 'predict_video_list': [], 'video_predict_stats': 0, 'timestamp': '2025-12-10 15:56:27'}]
+2025-12-10 15:56:27 | INFO     | Closing DB session
+2025-12-10 15:56:52 | INFO     | System v1.0.0 Shutting down...

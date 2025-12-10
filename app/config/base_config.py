@@ -34,6 +34,12 @@ class Settings(BaseSettings):
         description="Default predict time length"
     )
 
+    DEFAULT_COEFFICIENT: float = Field(
+        default=0.2,
+        env="DEFAULT_COEFFICIENT",
+        description="Default coefficient for predict"
+    )
+
     DATABASE_URL: str = Field(
         default="mysql+aiomysql://root:root123@localhost:3306/heartDb?charset=utf8mb4",
         env="DATABASE_URL"

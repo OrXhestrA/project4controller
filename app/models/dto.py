@@ -168,6 +168,10 @@ class PredictResultDto(BaseDto):
         description="视频数据预测结果状态",
         examples=[0, 1, 2]
     )
+    predict_video_list: List[float] = Field(
+        None,
+        description="视频数据预测结果列表"
+    )
 
     def to_dict(self, user_id: str):
         """
@@ -179,10 +183,11 @@ class PredictResultDto(BaseDto):
         return {
             "user_id": user_id,
             "predict_mixed": self.predict_mixed,
-            "predict_heart": self.predict_heart,
+            # "predict_heart": self.predict_heart,
             "predict_heart_list": self.predict_heart_list,
-            "predict_video": self.predict_video,
-            "predict_stats": self.predict_stats,
+            "predict_video_list": self.predict_video_list,
+            # "predict_video": self.predict_video,
+            # "predict_stats": self.predict_stats,
             "video_predict_stats": self.video_predict_stats,
             "timestamp": self.timestamp
         }
