@@ -30,10 +30,9 @@ class ModelInterface:
         :return:
         """
         try:
-            prediction = (settings.DEFAULT_COEFFICIENT * predict_heart //
-                          + (1 - settings.DEFAULT_COEFFICIENT) * predict_video)
+            prediction = (settings.DEFAULT_COEFFICIENT * predict_heart + (1 - settings.DEFAULT_COEFFICIENT) * predict_video)
             log.debug(f"mixed model result: {prediction}")
-            return prediction
+            return round(float(prediction), 3)
         except Exception as e:
             log.error(f"mixed model error: {e}")
 
@@ -157,7 +156,7 @@ class ModelInterface:
                 video_results, video, video_status = await ModelInterface.predict_video(user_id)
             if settings.DEFAULT_MODELS[0]:
                 mixed = await ModelInterface.predict_mixed(heart, video)
-
+            log.info(f"mixed model result: {mixed}, heart: {heart}, video: {video}")
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
