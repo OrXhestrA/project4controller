@@ -72,9 +72,9 @@ class PredictResponse(GenericResponse):
     预测结果响应
     """
     data: str = Field(default=[])
-    task_id: str = Field(default="")
+    # task_id: str = Field(default="")
 
-    def __init__(self, predict_results: List[PredictResultDto], task_id: str):
+    def __init__(self, predict_results: List[PredictResultDto]):
         """
 
         :param predict_results:
@@ -84,7 +84,7 @@ class PredictResponse(GenericResponse):
             [predict_result for predict_result in predict_results],
             ensure_ascii=False
         )
-        self.task_id = task_id
+        # self.task_id = task_id
 
 
 class PredictAllResponse(PredictResponse):

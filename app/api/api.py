@@ -119,11 +119,11 @@ async def set_parameters(request: SetParamsRequest) -> GenericResponse:
     summary="预测指定用户"
 )
 async def predict_by_user_ids(request: PredictRequest) -> PredictResponse:
-    log.info(f"Predict by user ids: {request.user_ids}, task_id : {request.task_id}")
+    log.info(f"Predict by user ids: {request.user_ids}")
     try:
         result = await ModelInterface.predict(request.user_ids)
         log.info(f"Predict result: {result}")
-        return PredictResponse(predict_results=result, task_id=request.task_id)
+        return PredictResponse(predict_results=result)
     except Exception as e:
         log.error(f"Error when predict by user ids: {e}")
         raise HTTPException(status_code=500, detail="Error when predict by user ids")

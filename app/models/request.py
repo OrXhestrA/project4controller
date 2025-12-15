@@ -19,7 +19,7 @@ class BaseRequest(BaseModel):
     """
     请求基础类
     """
-    user_id: str = Field(..., examples=["0001"], description="用户ID")
+    user_id: str = Field(None, examples=["0001"], description="用户ID")
 
 
 class SetParamsRequest(BaseRequest):
@@ -44,7 +44,10 @@ class SetParamsRequest(BaseRequest):
         description="模型启用状态 [mixed, heart, video]",
         examples=[[1, 1, 1]]
     )
-
+    coefficient: Optional[float] = Field(
+        None,
+        description="系数"
+    )
 
 class HeartDataRequest(BaseRequest):
     """
@@ -83,9 +86,9 @@ class PredictRequest(BaseRequest):
     """
     预测请求
     """
-    task_id: str = Field(..., description="任务ID")
+    # task_id: str = Field(None, description="任务ID")
     user_ids: List[str] = Field(
-        ...,
+        None,
         description="用户ID列表",
         examples=["0001", "0002"]
     )
