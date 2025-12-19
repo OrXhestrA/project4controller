@@ -51,6 +51,8 @@ class VideoStorage:
             "local_path": "",
         }
         """
+        if file is None:
+            raise ValueError("File is None")
         storage_path = f"video_{user_id}_{timestamp.strftime('%Y%m%d%H%M%S')}.{video_format}"
 
         result = {
@@ -118,8 +120,6 @@ class VideoStorage:
             log.info(f"Get frame - user {user_id}")
 
             video_path_list = await repo.get_video_data(user_id)
-            if video_path_list is None:
-                return None
             print(video_path_list)
             video_list = []
             if self.mode == "local":
