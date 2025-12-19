@@ -126,9 +126,7 @@ class StorageService:
         """
         async for db_session in get_db():
             redis_client = await get_redis_pool()
-            data = await storage.get_frame(
+            return await storage.get_frame(
                 user_id=user_id,
                 repo=CacheAsideRepository(db_session, redis_client)
             )
-            log.info(f"Get video data from db - user_id : {user_id}")
-            return data

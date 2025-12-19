@@ -104,6 +104,9 @@ class ModelInterface:
         log.info(f"video model predict - user : {user_id}")
         get = StorageService()
         frames = await get.get_video_data(user_id)
+        if frames is None:
+            log.warning("video model error: no video data")
+            return [], 0.0, 0
         try:
             # 实例化视频预测器，使用占位符路径
             predictor = VideoFatiguePredictor(model_path='app/weights/video_fatigue_model.pth')

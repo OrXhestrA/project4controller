@@ -1,0 +1,142 @@
+[33mcommit b6bbd8a0b2edb583f6d9e958d1753cefd29e1056[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Fri Dec 19 10:12:59 2025 +0800
+
+    All
+
+[33mcommit 7c56534219c375a6cdde42d9a262617a9c7d8d7b[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 15 15:13:50 2025 +0800
+
+    feat(return): request.py & request.py 字段修改
+
+[33mcommit a7a4ee29dd0bd8e7ed09b5aab9dafd79fd2cb4b4[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Dec 10 16:12:06 2025 +0800
+
+    feat(mixed_predict.py): 混合预测
+
+[33mcommit bcb5a5801cd926093f0876e03055d76049fba398[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Dec 10 15:57:23 2025 +0800
+
+    feat(video_predict.py): 视频分段预测功能
+
+[33mcommit bd6d256f1c3911d7aa056d6d52c1d16cc925fffe[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Dec 10 14:13:16 2025 +0800
+
+    feat(heart_predict.py): 心率分段预测功能
+
+[33mcommit c0a334e3646f69dbd9b8b7c71bda27ec2375dd5b[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 8 13:14:50 2025 +0800
+
+    feat(predict_service.py): 设置时间参数api更改
+
+[33mcommit cbbef422b94526029a81884c431c7e62a0bfd991[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 8 12:53:51 2025 +0800
+
+    feat(predict_service.py): 预测服务更正
+
+[33mcommit bf347ee26e51954a4d2f02ef871d36264358c524[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 8 12:02:05 2025 +0800
+
+    feat(predict_service.py): 预测服务更正
+
+[33mcommit 87e59b0094de392dd762795db09a4fcd006555ed[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Dec 3 11:32:58 2025 +0800
+
+    feat(predict): insert task_id
+
+[33mcommit ea928f670d099340c25931146db463af28a0660e[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 1 23:08:20 2025 +0800
+
+    feat(MAIN): docker settings
+
+[33mcommit d0fbfb0904d837d727a8318c85cde8808e2c2f7c[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 1 23:06:45 2025 +0800
+
+    feat(MAIN): docker settings
+
+[33mcommit 1def70278a5c06093bdcc00029a37edac6542438[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 1 21:40:14 2025 +0800
+
+    feat(MAIN): video
+
+[33mcommit 58549e404a43f58c0bd1b4834aba38ba1a618641[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Dec 1 20:06:38 2025 +0800
+
+    feat(MAIN): video
+
+[33mcommit 1dd92527d30dcc796f7b7a6d23c4a92e4029bdd6[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Sun Nov 30 22:23:02 2025 +0800
+
+    feat(MAIN): heart
+
+[33mcommit 8ff92050750031288a4b9f393794d0662f3cb85f[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Sat Nov 29 00:45:12 2025 +0800
+
+    feat(MAIN): heart
+
+[33mcommit 3721a756b40f7e15dc51a8bce4f4371c24a00387[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Sat Nov 29 00:38:00 2025 +0800
+
+    feat(MAIN): heart
+
+[33mcommit 782163172c8ae07e919dd4ee2dc02c1f9e7216c0[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Nov 26 14:51:22 2025 +0800
+
+    feat(test): 测试类 - heart_data
+
+[33mcommit d4e6d5009e31104f7c33b1c6fe6ec7ecccdeec71[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Nov 26 03:03:15 2025 +0800
+
+    fix(config): 设置修改
+
+[33mcommit 8f50def1057c2e330416b40f881420f92055839f[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Nov 26 03:02:24 2025 +0800
+
+    fix(request): RESTful请求定义修改
+
+[33mcommit 1b45ac104d8198f845908480837142cbe1fa5f1c[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Wed Nov 26 03:00:51 2025 +0800
+
+    fix(data): 数据库属性修改
+
+[33mcommit aa4d98469342a3a2aa7bdd8ad0e0dd211b3546ec[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Tue Nov 25 01:49:35 2025 +0800
+
+    fix(data): models.py modify & completed
+
+[33mcommit a79d29e1a2f368f2837f79f9c2a6feb5a1bf999b[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Nov 24 19:11:34 2025 +0800
+
+    feat(all): construct project
+
+[33mcommit c72922439f0ccc5eabaa7e89f864e23663072906[m
+Author: OrXhetrA <18353229565@163.com>
+Date:   Mon Nov 24 19:11:10 2025 +0800
+
+    feat(all): construct project database related
+    1. models.py - model
+    2. db_models.py - database tables
+    3. config.py - database settings
+    4. cache_aside_repository.py - redis mysql
+    5. database.py - database redis mysql init get_pool
