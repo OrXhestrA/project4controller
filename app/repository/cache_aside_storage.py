@@ -329,3 +329,9 @@ class CacheAsideRepository:
             log.info(f"Set cache - key : {cache_key}")
             return data
         return None
+
+
+# TODO get_predict_value(user_id)
+#   [[timestamp, value],...]
+# TODO put_predict_value(user_id, value)
+#   生成当前时间戳，存入数据库

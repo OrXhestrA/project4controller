@@ -152,25 +152,30 @@ class ModelInterface:
             heart_results = []
             video_results = []
             video_status = 0
-
+            # TODO 存储预测的值 表-心率，视频 的预测值 (可选：第一次全部存储，后面是存储列表最后一个)
+            # 调用 cache_aside_storage中的函数
             if settings.DEFAULT_MODELS[1]:
                 heart_results, heart = await ModelInterface.predict_heart(user_id)
+                # TODO
             if settings.DEFAULT_MODELS[2]:
                 video_results, video, video_status = await ModelInterface.predict_video(user_id)
+                # TODO
             if settings.DEFAULT_MODELS[0]:
                 mixed = await ModelInterface.predict_mixed(heart, video)
             log.info(f"mixed model result: {mixed}, heart: {heart}, video: {video}")
             result_dto = PredictResultDto(
                 predict_mixed=mixed,
                 predict_heart=heart,
-                predict_heart_list=heart_results,
-                predict_video_list=video_results,
+                predict_heart_list=heart_results,  # [1, 2, 3, .., 10]
+                predict_video_list=video_results,  # [1, 2, 3, .., 10]
                 predict_video=video,
                 predict_stats=await ModelInterface.get_predict_status(prediction=mixed),
                 video_predict_stats=video_status,
                 timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             )
             results.append(result_dto.to_dict(user_id))
+
+
         return results
 
 

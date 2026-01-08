@@ -99,3 +99,5 @@ class PredictByUserIdResponse(PredictResponse):
     预测指定用户结果响应
     """
     pass
+
+# TODO Response

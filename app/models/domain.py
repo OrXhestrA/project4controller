@@ -73,3 +73,11 @@ class BioDataDB(Base):
     __table_args__ = (
         Index("idx_user_timestamp", "user_id", "timestamp"),
     )
+
+
+# TODO class:HistoryData
+#     id = Column(Integer, primary_key=True, autoincrement=True)
+#     user_id = Column(String(255), nullable=False)
+#     timestamp = Column(DateTime, nullable=False)
+#     value = Column(Float, nullable=True)
+#

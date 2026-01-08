@@ -105,7 +105,8 @@ async def set_parameters(request: SetParamsRequest) -> GenericResponse:
             settings.DEFAULT_MODELS = request.models
         if request.predict_time_length:
             settings.DEFAULT_PREDICT_TIME_LENGTH = request.predict_time_length
-        log.info(f"Set parameters success: {settings.DEFAULT_THRESHOLDS}, {settings.DEFAULT_MODELS}, {settings.DEFAULT_PREDICT_TIME_LENGTH}")
+        log.info(
+            f"Set parameters success: {settings.DEFAULT_THRESHOLDS}, {settings.DEFAULT_MODELS}, {settings.DEFAULT_PREDICT_TIME_LENGTH}")
         return GenericResponse()
     except Exception as e:
         log.error(f"Error when set parameters: {e}")
@@ -127,3 +128,9 @@ async def predict_by_user_ids(request: PredictRequest) -> PredictResponse:
     except Exception as e:
         log.error(f"Error when predict by user ids: {e}")
         raise HTTPException(status_code=500, detail="Error when predict by user ids")
+
+# TODO API: predict_history_by_user_ids (user_ids, 查询最远时间)
+# 可以查询预测的历史值: user_id, [timestamp, predict_value]
+# 讨论后
+# 调用 get_predict_value(user_id)
+#   [[timestamp, value],...]

@@ -92,3 +92,6 @@ class PredictRequest(BaseRequest):
         description="用户ID列表",
         examples=["0001", "0002"]
     )
+
+
+# TODO 请求
